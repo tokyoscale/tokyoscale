@@ -80,16 +80,6 @@
   <url>
     <loc>/docs/</loc>
     <lastmod>2020-11-12T16:46:56+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="no"
-                href="/no/docs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/docs/"
-                />
   </url>
   
   <url>
@@ -165,16 +155,6 @@
   <url>
     <loc>/search/</loc>
     <lastmod>2020-11-12T16:46:56+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="no"
-                href="/no/search/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/search/"
-                />
   </url>
   
 </urlset>
