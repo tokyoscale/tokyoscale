@@ -1,5 +1,5 @@
 +++
-title = "Gruntwork|DevOps as a Service"
+title = "TokyoScale|DevOps as a Service"
 template = "base.html"
 +++
 

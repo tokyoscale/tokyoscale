@@ -14,4 +14,4 @@ We also offer a CIS AWS Foundations Benchmark compliant version of the Reference
 
 # Pricing
 
-Check out the Pricing page for details. Please note that to use the Reference Architecture, you must be a Gruntwork Subscriber.
+Check out the Pricing page for details. Please note that to use the Reference Architecture, you must be a TokyoScale Subscriber.
