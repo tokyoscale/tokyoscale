@@ -1,6 +1,6 @@
 # TokyoScale.com website
 
-This site is generate with [zola] - A fast static site generator in a single binary with everything built-in.
+This site is generated with [zola] - A fast static site generator in a single binary with everything built-in.
 
 ## Getting started
 
@@ -18,7 +18,9 @@ For more details of CLI, please visit [zola#serve]
 
 ### Deployment pipeline
 
-This repository is using GitHub action to automatically build and deploy the zola site to the `gh-pages` branch as [GitHub Pages]. For more details, please visit [zola-deploy-action].
+This repository is using GitHub action to automatically build and deploy the zola site to the `gh-pages` branch as [GitHub Pages].
+
+For more details, please visit [zola-deploy-action].
 
 [Github Pages]:https://pages.github.com/
 [zola]:https://www.getzola.org/
