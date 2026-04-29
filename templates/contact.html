@@ -38,41 +38,30 @@
 
   <section class="section">
     <div class="container">
-      <div class="row mb-5 align-items-end">
-        <div class="col-md-6" data-aos="fade-up">
-
-          <h2>{% if lang == 'ja' %}メッセージを送る{% else %}Send a message{% endif %}</h2>
-          <p class="mb-0 text-muted small">
-            {% if lang == 'ja' %}
-            事業者、金融機関・アドバイザー、運営側、自治体、クリニック・施設、エンジニアの方など幅広くお受けします。状況や前提を簡潔に書いていただけると幸いです。
-            {% else %}
-            Owners, bankers, advisers, operators, municipalities, clinicians, technologists—all welcome. We reply thoughtfully; please share context freely.
+      {# Same Pageclip form URL + field names on /contact and /en/contact; only headings/labels translate. Minimal fields per Pageclip basics: https://pageclip.co/docs #}
+      <div class="row justify-content-center">
+        <div class="col-lg-7" data-aos="fade-up">
+          <h2 class="h4 mb-3">{% if lang == 'ja' %}メッセージ{% else %}Message{% endif %}</h2>
+          <p class="text-muted small mb-4">
+            {% if lang == 'ja' %}ご用件・状況を簡潔にご記入ください。
+            {% else %}Share what you’d like help with—we’ll reply by email.
             {% endif %}
           </p>
-        </div>
 
-      </div>
-
-      <div class="row">
-        <div class="col-lg-10" data-aos="fade-up">
-          {# Pageclip — static site form proxy: https://pageclip.co/docs #}
           <form action="https://send.pageclip.co/j6UaNJ0TZqOyt1exrj7kO4fPtHN4zCdG" class="pageclip-form" method="post">
-            {% if lang == 'ja' %}
-            <input type="text" name="name" autocomplete="name" required placeholder="お名前（必須）" class="mb-2 w-100" />
-            <input type="email" name="email" autocomplete="email" required placeholder="メールアドレス（必須）" class="mb-2 w-100" />
-            <input type="text" name="subject" maxlength="240" placeholder="件名（Pageclip メール通知の件名に利用）" class="mb-2 w-100" />
-            <textarea name="body" rows="8" required placeholder="本文（必須）" class="w-100 mb-3"></textarea>
-            {% else %}
-            <input type="text" name="name" autocomplete="name" required placeholder="Name (required)" class="mb-2 w-100" />
-            <input type="email" name="email" autocomplete="email" required placeholder="Email (required)" class="mb-2 w-100" />
-            <input type="text" name="subject" maxlength="240" placeholder="Subject (used in notification email)" class="mb-2 w-100" />
-            <textarea name="body" rows="8" required placeholder="Message (required)" class="w-100 mb-3"></textarea>
-            {% endif %}
-            <button type="submit" class="pageclip-form__submit btn btn-primary px-4 py-2">
+            {# Optional: fills notification subject; keeps UI minimal #}
+            <input type="hidden" name="subject" value="{% if lang == 'ja' %}お問い合わせ｜東京スケイル{% else %}TokyoScale — contact{% endif %}" />
+            <input type="text" name="name" autocomplete="name" required class="form-control mb-3" placeholder="{% if lang == 'ja' %}お名前{% else %}Your name{% endif %}" />
+            <input type="email" name="email" autocomplete="email" required class="form-control mb-3" placeholder="{% if lang == 'ja' %}メール{% else %}Your email{% endif %}" />
+            <textarea name="body" rows="5" required class="form-control mb-3" placeholder="{% if lang == 'ja' %}本文{% else %}Message{% endif %}"></textarea>
+            <button type="submit" class="pageclip-form__submit btn btn-primary">
               <span>{% if lang == 'ja' %}送信{% else %}Send{% endif %}</span>
             </button>
           </form>
-          <p class="small text-muted mt-4 mb-0">{% if lang == 'ja' %}送信処理は<a href="https://pageclip.co" rel="noopener noreferrer" target="_blank">Pageclip</a>を利用しています。届かない場合は迷惑メールフィルターとPageclipサイト設定（ドメイン許可・通知メールアドレス）をご確認ください。{% else %}Submissions use <a href="https://pageclip.co" rel="noopener noreferrer" target="_blank">Pageclip</a>. If nothing arrives, check spam filters and Pageclip dashboard (allowed domains &amp; notification email).{% endif %}</p>
+
+          <p class="small text-muted mt-3 mb-0">
+            {% if lang == 'ja' %}送信は<a href="https://pageclip.co/" rel="noopener noreferrer" target="_blank">Pageclip</a>が処理します。{% else %}Powered by <a href="https://pageclip.co/" rel="noopener noreferrer" target="_blank">Pageclip</a>.{% endif %}
+          </p>
         </div>
       </div>
 
