@@ -2,6 +2,10 @@
 title = "東京スケイルについて"
 template = "works.html"
 description = "日本の産業インフラの近代化——エンジニアリング・実行規律・現場の現実への敬意を両立させる変革パートナー。"
+
+[extra]
+# company story arc — avoids duplicating factories “foundation” heroes
+mood = "stance"
 +++
 
 東京スケイルは東京を拠点とします。強い経営者・ブランドとしての知見を持ちながら、承継のタイミング、人手不足、ITの断片化といった論点にも直面している、日本の歴史ある事業と協働しています。

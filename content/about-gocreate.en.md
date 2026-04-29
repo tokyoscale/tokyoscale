@@ -2,6 +2,9 @@
 title = "Go Create"
 template = "works.html"
 description = "Create Impact. Earn. Growth on the go, anywhere, anytime with a distributed economy powered."
+
+[extra]
+mood = "archive"
 +++
 
 # What we do

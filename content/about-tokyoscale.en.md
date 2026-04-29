@@ -2,6 +2,9 @@
 title = "About TokyoScale"
 template = "works.html"
 description = "A Japan‑based partner for long‑horizon modernization—engineering, disciplined delivery, and respect for operational reality."
+
+[extra]
+mood = "stance"
 +++
 
 TokyoScale is headquartered in Tokyo. We work with established Japanese organizations that carry deep institutional knowledge—and also face succession pressure, labor shortages, and uneven digitization.

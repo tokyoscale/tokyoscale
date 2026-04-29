@@ -24,3 +24,4 @@ alwaysApply: false
 
 - **Bootstrap** bundle + SoftLand-derived JS/CSS in `static/`. Prefer existing utility classes (`tokyoscale.css`) over one-off duplication.
 - New images: **`static/img/`** (or Sass); avoid adding large binaries without purpose.
+- **Hero mood:** `macros/mood.html` (`mood_svg`). Optional **`[extra] mood_photo = "img/…"`** (+ `mood_photo_alt`) replaces SVG with grayscale photo (-licensed/original JPG/WebP in `static/`).

@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% import "macros/mood.html" as mood %}
 
 {% block title %}{{ page.title }} | TokyoScale{% endblock title %}
 {% block meta_description %}{{ page.description | default(value="TokyoScale") }}{% endblock meta_description %}
 
 {% block content %}
-<section class="hero-section inner-page">
+<section class="hero-section inner-page hero-with-mood">
     <div class="wave">
 
       <svg width="1920px" height="265px" viewBox="0 0 1920 265" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -17,16 +18,16 @@
 
     </div>
 
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-12">
-          <div class="row justify-content-center">
-            <div class="col-md-10 text-center hero-text">
+    <div class="container py-lg-4">
+      <div class="row align-items-lg-start justify-content-lg-between gx-lg-5">
+        <div class="col-lg-7 text-center text-lg-start hero-text mb-4 mb-lg-0 pb-2 pb-lg-0 px-3 px-lg-0">
               <h1 data-aos="fade-up" data-aos-delay="">{{ page.title }}</h1>
-              <p class="mb-5" data-aos="fade-up" data-aos-delay="100">{{ page.date | date(format="%d/%m/%Y") }} By <a href="#" class="text-white">Admin</a></p>
-            </div>
-            </div>
-          </div>
+              <p class="mb-lg-0 pb-5 pb-lg-0 mb-0 small" data-aos="fade-up" data-aos-delay="100">{{ page.date | date(format="%d/%m/%Y") }}</p>
+        </div>
+        <div class="col-lg-4 px-4 px-lg-2 mb-2 mb-lg-0" data-aos="fade-up" data-aos-delay="80">
+              {% if page.extra.mood_photo %}<figure class="ts-mood-panel ts-mood-panel--photo">
+            <img src="{{ get_url(path=page.extra.mood_photo | trim) }}" alt="{{ page.extra.mood_photo_alt | default(value='') }}" loading="lazy" decoding="async" width="560" height="420" sizes="(min-width: 992px) 320px, 90vw"/>
+          </figure>{% else %}{{ mood::mood_svg(kind=page.extra.mood | default(value='detail')) }}{% endif %}
         </div>
       </div>
     </div>

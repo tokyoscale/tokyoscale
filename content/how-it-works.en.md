@@ -2,6 +2,9 @@
 title = "How we work together"
 template = "works.html"
 description = "Assessment, phased execution, adoption support, and long‑term stewardship—designed around how Japanese organizations actually operate."
+
+[extra]
+mood = "path"
 +++
 
 Partnerships vary, but engagements tend to share a backbone. Expect listening before tooling, phased change before spectacle, stewardship after launch.
