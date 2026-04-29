@@ -1,0 +1,20 @@
+---
+description: TokyoScale — Zola Markdown content and front matter
+globs: content/**/*.{md,toml}
+alwaysApply: false
+---
+
+# Content (`content/`)
+
+## Files
+
+- **Front matter** top **`+++`** then body. Set **`template = "..."`** when overriding default (`index.html`, `contact.html`, `products/list.html`, `products/single.html`, etc.).
+- **Bilingual pairing:** JA `page.md` + EN `page.en.md` keeps URLs aligned under `/slug` vs `/en/slug`.
+
+## Links in prose
+
+- Prefer **relative** links that match routing (e.g. `/contact/` in JA content may need verifying against **`get_url`** in templates—for consistency, mirror navigation paths Zola emits).
+
+## SEO
+
+- Per-page **`title`** / **`description`** in front matter or template blocks supports meta and future Open Graph—not every page needs taxonomy fields—leave **`tags`/categories empty** unless used.

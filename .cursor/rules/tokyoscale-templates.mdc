@@ -1,0 +1,26 @@
+---
+description: TokyoScale — Zola templates, macros, bilingual patterns
+globs: templates/**/*
+alwaysApply: false
+---
+
+# Templates (`templates/`)
+
+## Base & language
+
+- Extend **`base.html`**; set **`{% block title %}`, `{% block meta_description %}`, `{% block content %}`** per page.
+- Current language: **`lang`** (`ja` \| `en`). Switch copy with **`{% if lang == 'ja' %} … {% else %} … {% endif %}`** sparingly—avoid duplicating identical markup twice (reuse one form with translated placeholders/strings).
+
+## URLs & macros
+
+- Use **`{{ get_url(path='@/slug.md', lang=lang) }}`** or `@/_index.md` for home—not raw `/contact/` paths—for correct prefix per language.
+- **`macros/brand.html`:** logo, language switch (flags); keep **`hreflang` / `aria-`** semantics when touching those links.
+
+## Third-party assets
+
+- **Pageclip:** `pageclip-form` + submit **`button`** with **`pageclip-form__submit`** and inner **`<span>`** (required for spinner). Do not reuse **`php-email-form`** class—PHP validator was removed.
+
+## Frontend
+
+- **Bootstrap** bundle + SoftLand-derived JS/CSS in `static/`. Prefer existing utility classes (`tokyoscale.css`) over one-off duplication.
+- New images: **`static/img/`** (or Sass); avoid adding large binaries without purpose.

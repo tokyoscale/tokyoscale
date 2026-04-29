@@ -1,0 +1,35 @@
+---
+description: TokyoScale — Zola bilingual site basics, git, CI, integrations
+alwaysApply: true
+---
+
+# TokyoScale site core
+
+## Stack & layout
+
+- **Generator:** [Zola](https://www.getzola.org/) (`zola serve`, `zola build`). Sources: **`config.toml`**, `content/`, `templates/`, `sass/` (compiled), **`static/`** (copied as-is).
+- **Do not commit** **`public/`** — build output; CI regenerates on deploy.
+
+## Languages
+
+- **`default_language = "ja"`** in `config.toml`. Japanese routes: `/page/`.
+- English: `[languages.en]` — routes under **`/en/...`** (e.g. `/en/contact/`).
+- Prefer **paired files:** `something.md` (JA front matter `+++`) + `something.en.md` (EN).
+- Routes with feeds/taxonomies (`tags`, etc.) remain—avoid orphaned empty stubs when adding routes.
+
+## Live site
+
+- **`base_url`:** `https://www.tokyoscale.com` — use `{{ get_url(path='…', lang=lang) }}` and avoid hard-coded absolute URLs in templates.
+
+## Forms
+
+- **Contact:** [Pageclip](https://pageclip.co/docs) (`pageclip-form`, `send.pageclip.co`, assets in `base.html`). Dashboard must allow **`www.tokyoscale.com`** (and apex if used).
+
+## Deploy
+
+- GitHub Actions in **`.github/workflows/`** → **`gh-pages`**, **`github.token`** + `permissions: contents: write`.
+- Prefer recent **`actions/checkout`**; workflow may set **`FORCE_JAVASCRIPT_ACTIONS_TO_NODE24`** for Node on runners.
+
+---
+
+When editing prose or structure, rebuild with `zola build` and confirm no orphan sections.
