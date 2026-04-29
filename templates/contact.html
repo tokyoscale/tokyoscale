@@ -53,38 +53,29 @@
 
       </div>
 
-<!--      <div class="row">-->
-<!--        <div class="col-md-4 ml-auto order-2" data-aos="fade-up">-->
-<!--          <ul class="list-unstyled">-->
-<!--            <li class="mb-3">-->
-<!--              <strong class="d-block mb-1">Address</strong>-->
-<!--              <span>203 Fake St. Mountain View, San Francisco, California, USA</span>-->
-<!--            </li>-->
-<!--            <li class="mb-3">-->
-<!--              <strong class="d-block mb-1">Phone</strong>-->
-<!--              <span>+1 232 3235 324</span>-->
-<!--            </li>-->
-<!--            <li class="mb-3">-->
-<!--              <strong class="d-block mb-1">Email</strong>-->
-<!--              <span>youremail@domain.com</span>-->
-<!--            </li>-->
-<!--          </ul>-->
-<!--        </div>-->
-
-        <div class="col-md-6 mb-5 mb-md-0" data-aos="fade-up">
-          <!-- Pageclip -->
+      <div class="row">
+        <div class="col-lg-10" data-aos="fade-up">
+          {# Pageclip — static site form proxy: https://pageclip.co/docs #}
           <form action="https://send.pageclip.co/j6UaNJ0TZqOyt1exrj7kO4fPtHN4zCdG" class="pageclip-form" method="post">
-            <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
-            <input type="text" name="name" placeholder="John Doerr" />
-            <input type="email" name="email" placeholder="JohnDoerr@okr.com" />
-            <!-- This button will have a loading spinner. Keep the inner span for best results. -->
-            <button type="submit" class="pageclip-form__submit">
-              <span>Send</span>
+            {% if lang == 'ja' %}
+            <input type="text" name="name" autocomplete="name" required placeholder="お名前（必須）" class="mb-2 w-100" />
+            <input type="email" name="email" autocomplete="email" required placeholder="メールアドレス（必須）" class="mb-2 w-100" />
+            <input type="text" name="subject" maxlength="240" placeholder="件名（Pageclip メール通知の件名に利用）" class="mb-2 w-100" />
+            <textarea name="body" rows="8" required placeholder="本文（必須）" class="w-100 mb-3"></textarea>
+            {% else %}
+            <input type="text" name="name" autocomplete="name" required placeholder="Name (required)" class="mb-2 w-100" />
+            <input type="email" name="email" autocomplete="email" required placeholder="Email (required)" class="mb-2 w-100" />
+            <input type="text" name="subject" maxlength="240" placeholder="Subject (used in notification email)" class="mb-2 w-100" />
+            <textarea name="body" rows="8" required placeholder="Message (required)" class="w-100 mb-3"></textarea>
+            {% endif %}
+            <button type="submit" class="pageclip-form__submit btn btn-primary px-4 py-2">
+              <span>{% if lang == 'ja' %}送信{% else %}Send{% endif %}</span>
             </button>
           </form>
+          <p class="small text-muted mt-4 mb-0">{% if lang == 'ja' %}送信処理は<a href="https://pageclip.co" rel="noopener noreferrer" target="_blank">Pageclip</a>を利用しています。届かない場合は迷惑メールフィルターとPageclipサイト設定（ドメイン許可・通知メールアドレス）をご確認ください。{% else %}Submissions use <a href="https://pageclip.co" rel="noopener noreferrer" target="_blank">Pageclip</a>. If nothing arrives, check spam filters and Pageclip dashboard (allowed domains &amp; notification email).{% endif %}</p>
         </div>
-
       </div>
+
     </div>
   </section>
   {% endblock content%}

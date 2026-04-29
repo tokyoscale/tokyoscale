@@ -1,1 +1,4 @@
 .idea/
+
+# Zola output (rebuild with `zola build`; CI regenerates on deploy)
+public/

@@ -1,10 +1,16 @@
 # Deploy built site to gh-pages branch (GitHub Pages).
-# Requires: Settings → Actions → General → Workflow permissions → Read and write (or use permissive defaults with `permissions` below).
+# Requires: Settings → Actions → General → Workflow permissions → Read and write.
+#
+# FORCE_JAVASCRIPT_ACTIONS_TO_NODE24 opts JS actions into Node 24 ahead of GHES default,
+# avoiding Node 20 deprecation warnings for checkout and nested actions.
 on:
   push:
     branches:
       - master
   pull_request:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 permissions:
   contents: write
@@ -15,7 +21,7 @@ jobs:
     if: github.ref != 'refs/heads/master'
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Build only (no deploy)
         uses: shalzz/zola-deploy-action@v0.22.1
         env:
@@ -28,7 +34,7 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Build and deploy
         uses: shalzz/zola-deploy-action@v0.22.1
         env:
