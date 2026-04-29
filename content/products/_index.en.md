@@ -1,5 +1,5 @@
 +++
-title = "アーカイブ"
+title = "Archive"
 sort_by = "date"
 paginate_by = 6
 template = "products.html"

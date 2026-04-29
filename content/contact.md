@@ -1,5 +1,5 @@
 +++
-title = "Get In Touch"
-description = "Do you want to reduce your organization's energy consumption? Or decrease your operational cost? Talk to us!"
+title = "お問い合わせ"
+description = "承継・DX・介護運営・提携・実行可能性について。すぐ動く予定でも、静かな情報収集フェーズでもお気軽に。"
 template = "contact.html"
 +++

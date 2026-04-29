@@ -1,27 +1,399 @@
 {% extends "base.html" %}
 
-{% block title %}TokyoScale | By DevOps For DevOps{% endblock title %}
+{%- block title -%}
+{%- if lang == 'ja' -%}東京スケイル | 次世代の産業を支えるテクノロジー・オペレーター{%- else -%}TokyoScale | Technology operator for Japan’s next generation of businesses{%- endif -%}
+{%- endblock title -%}
+
+{%- block meta_description -%}
+{%- if lang == 'ja' -%}承継や人手不足に直面する産業向けに、AI・ロボティクス・自動化と運用規律を組み合わせる日本拠点のパートナー。介護を含む現場に根ざした変革を目指します。{%- else -%}Japan-based operator and transformation partner: AI, robotics, automation, and software for succession-ready businesses—with a focus on sustainable elderly care operations.{%- endif -%}
+{%- endblock meta_description -%}
 
 {% block content %}
-  <!-- ======= Hero Section ======= -->
-  <section class="hero-section" id="hero">
+
+{% if lang == 'ja' %}
+
+  <section class="hero-section hero-tokyoscale" id="hero">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 hero-text-image">
           <div class="row">
-            <div class="col-lg-7 text-center text-lg-left">
-              <h1 data-aos="fade-right">Transform Your Business With AI and Robotics From Japan</h1>
-              <p class="mb-5" data-aos="fade-right" data-aos-delay="100">We get you running your systems and you get 100% of the code.</p>
-              <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a href="/about-tokyoscale" class="btn btn-outline-white">About TokyoScale</a></p>
+            <div class="col-lg-8 text-center text-lg-left">
+              <p class="hero-eyebrow" data-aos="fade-right">日本 · 変革 · 経営との共創</p>
+              <h1 data-aos="fade-right">AI・ロボティクス・自動化と運用の規律で、事業そのものを強くする。</h1>
+              <p class="mb-4 hero-lead" data-aos="fade-right" data-aos-delay="100">
+                東京スケイルは典型的な SI 型の立ち位置だけを目指していません。伝統的な事業の承継・人手・ITの断片化に悩む経営ともに、買収・提携・伴走を通じて、現場が持続するシステムへ置き換えていきます。
+              </p>
+              <div class="hero-actions" data-aos="fade-right" data-aos-delay="180">
+                <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-light mr-2 mb-2 mb-sm-0">お問い合わせ</a>
+                <a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}" class="btn btn-outline-white mr-2 mb-2 mb-sm-0">会社概要</a>
+                <a href="{{ get_url(path='@/how-it-works.md', lang=lang) }}" class="btn btn-outline-white mb-2 mb-sm-0">進め方</a>
+              </div>
             </div>
-<!--            <div class="col-lg-5 iphone-wrap">-->
-<!--              <img src="{{ get_url(path="img/phone_1.png")}}" alt="Image" class="phone-1" data-aos="fade-right">-->
-<!--              <img src="{{ get_url(path="img/phone_2.png")}}" alt="Image" class="phone-2" data-aos="fade-right" data-aos-delay="200">-->
-<!--            </div>-->
           </div>
         </div>
       </div>
     </div>
-  </section><!-- End Hero -->
+  </section>
+
+  <section class="ts-section ts-section-muted" id="context">
+    <div class="container">
+      <div class="row justify-content-lg-between align-items-start">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <p class="ts-kicker">背景</p>
+          <h2 class="ts-h2">日本の有力企業は深いノウハウを持ちながら、構造的な圧力にもさらされています。</h2>
+        </div>
+        <div class="col-lg-6 ts-prose">
+          <p>オーナー世代の交替、人材の流動、バラバラなデジタル化――「意志がない」のではなく、変化が経営・安全・現場の両立を難しくしているのが実情です。単発のシステム案件では、運用のほころびを取り切れません。</p>
+          <p class="mt-3"><strong>介護・福祉</strong>は代表例であり、ニーズ・規制・マージンの制約が同時進行しています。技術は、画面増殖のためではなく、負荷とリスクが下がる方向にだけ働いてほしいと私たちは考えます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section ts-section-bordered">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-10 mx-auto text-center">
+          <p class="ts-kicker">提供するもの</p>
+          <h2 class="ts-h2">ソフトウェア／AI／ロボティクス／自動化に、結果に責任を持つ当事者視点。</h2>
+          <p class="ts-prose mx-auto mt-3">引き継ぎ・例外処理・見えない作業時間——現場での実態を優先順位へ落とし、磨き込みより先に評価が破綻しない導線を組みます。</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="ts-card" data-aos="fade-up">
+            <h3>業務プロセス／システム</h3>
+            <p>プロセス設計・ツール選定・連携・データ品質への投資――流行よりも再現できる成果へ。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="80">
+            <h3>AI と自動化</h3>
+            <p>誤り・再入力・検知業務への負担を現実に下げられるところに限定し、運用でのガバナンスを欠かしません。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="160">
+            <h3>ロボティクス・センシング</h3>
+            <p>搬送や反復運動・環境モニタが安全と生産性に直結するときだけ、ハード／ソフトを一体で検討します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section ts-section-muted" id="elderly-care">
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <p class="ts-kicker">重点テーマの一つ</p>
+          <h2 class="ts-h2">介護・高齢者施設――延命のみならず、健康寿命と生活の質、そして運営の持続へ。</h2>
+          <div class="ts-care-accent ts-prose mt-4">
+            <p>ご利用者の尊厳と「いま」を支えるために、情報が必要です。現場にはシフト計画・投薬・アセス・請求・届出・家族対応まで同時並行があり、しかも収益環境は厳しい。このジレンマに、バックオフィスの画面追加だけでは勝てません。</p>
+            <p class="mt-3">東京スケイルは<strong>健康寿命</strong>へつながる観察・支援ロジック・安全文化・夜間運営の負けにくさに関心があります。ヒューマンケアへ立ち返るための自動化だけを選択します。</p>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1">
+          <div class="ts-card" data-aos="fade-left">
+            <h3>関心があるテーマの例</h3>
+            <ul class="list-unstyled ts-value-list mb-0">
+              <li>ベッドサイド時間を削らずに共有される「いま」の可視化</li>
+              <li>伝票処理・突合作業への機械的正確さ</li>
+              <li>シフト運用現実に合わせた学習・訓練</li>
+              <li>介護者が補完される協働ロボット／センシング</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section" id="model">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8">
+          <p class="ts-kicker">買収・提携・支援</p>
+          <h2 class="ts-h2">規律あるテクノロジーが年単位で積み上がる事例にのみ、時間をかけます。</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="ts-card h-100" data-aos="fade-up">
+            <h3>買収</h3>
+            <p>ブランド継続と雇用を守りつつ経営を更新したい所有者向け――資本と実行力を同時投入します。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="ts-card h-100" data-aos="fade-up" data-aos-delay="60">
+            <h3>提携</h3>
+            <p>経営が残るモデルでのガバナンス・テーマ設定・評価指標の統一。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="ts-card h-100" data-aos="fade-up" data-aos-delay="120">
+            <h3>伴走支援</h3>
+            <p>M&amp;A 準備まで至らなくても、意思が固いチームとの改善プログラムへ。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="ts-card h-100" data-aos="fade-up" data-aos-delay="180">
+            <h3>選別</h3>
+            <p>リーダーのコミットと現場ファクトがある時だけ規模より深さへ。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section ts-section-muted ts-section-bordered" id="values">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-10">
+          <p class="ts-kicker">価値観</p>
+          <h2 class="ts-h2">成果と現場への敬意を両立させる規範。</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="ts-card" data-aos="fade-up">
+            <h3>ヒューマン中心の自動化</h3>
+            <p>判断・気遣いから切り離すのではなく、負わせすぎた手続摩擦をなくす順に進めます。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="50">
+            <h3>熟練への敬意</h3>
+            <p>歴史的年輪だけでは埋められない洞察を優先――エンジニアリングが従わない逆転関係へはしない。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>噂話にならない AI</h3>
+            <p>観察可能な範囲と期限をセットに――現場ワークロードとの距離だけが空くロードマップは避ける。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="150">
+            <h3>長期の所有者意識</h3>
+            <p>導入の瞬間だけでなく、運用フェーズにもリソース計画があります。</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4 mb-lg-0">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>働く人にも、利用者にも</h3>
+            <p>破綻しないオペレーションが、やさしさという差を生む空間になります。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section ts-section-cta ts-cta" id="cta">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <h2>承継・DX・介護創新まで、まず対話から。</h2>
+          <p class="mt-3 mb-0">事業会社、銀行・保険、自治体、アドバイザー・投資家、医療／介護事業者、テクノロジー側の協創パートナー――接地した変革について話したい方を歓迎します。</p>
+        </div>
+        <div class="col-lg-4 text-lg-right" data-aos="fade-left">
+          <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-light btn-lg">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% else %}
+
+  <section class="hero-section hero-tokyoscale" id="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 hero-text-image">
+          <div class="row">
+            <div class="col-lg-8 text-center text-lg-left">
+              <p class="hero-eyebrow" data-aos="fade-right">Japan · Transformation · Ownership</p>
+              <h1 data-aos="fade-right">We engineer better businesses—combining AI, robotics, automation, and operational discipline.</h1>
+              <p class="mb-4 hero-lead" data-aos="fade-right" data-aos-delay="100">
+                TokyoScale is not a conventional software consultancy. We acquire, partner with, and help operate traditional Japanese companies—often under‑digitized and facing succession and staffing pressure—and build systems that make work safer, calmer, and more profitable over the long term.
+              </p>
+              <div class="hero-actions" data-aos="fade-right" data-aos-delay="180">
+                <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-light mr-2 mb-2 mb-sm-0">Get in touch</a>
+                <a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}" class="btn btn-outline-white mr-2 mb-2 mb-sm-0">About us</a>
+                <a href="{{ get_url(path='@/how-it-works.md', lang=lang) }}" class="btn btn-outline-white mb-2 mb-sm-0">How we work together</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section ts-section-muted" id="context">
+    <div class="container">
+      <div class="row justify-content-lg-between align-items-start">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <p class="ts-kicker">The context</p>
+          <h2 class="ts-h2">Japan’s incumbent businesses carry deep know‑how—they also face structural pressure.</h2>
+        </div>
+        <div class="col-lg-6 ts-prose">
+          <p>Worthy companies are squeezed by aging owners, labor scarcity, fragmented IT, and hard‑to‑change workflows. Digitization slides year to year—not because operators lack intent, but because change is risky, people are stretched, and “software projects” rarely fix what actually breaks in the operating model.</p>
+          <p class="mt-3"><strong>Elderly care </strong>is one of the most urgent domains: demand rises, regulation tightens margins, and frontline roles are physically and emotionally taxing. Technology should lighten that load—not add screen time for its own sake.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section ts-section-bordered">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-10 mx-auto text-center">
+          <p class="ts-kicker">What we bring</p>
+          <h2 class="ts-h2">Software, AI, robotics, and automation—with the mindset of operators who stay for the consequences.</h2>
+          <p class="ts-prose mx-auto mt-3">We map how work truly happens—handoffs, tacit knowledge, exception handling—and prioritize changes that endure: fewer repetitive tasks, clearer information, tighter safety, predictable throughput, and margins that compound.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="ts-card" data-aos="fade-up">
+            <h3>Workflow &amp; systems</h3>
+            <p>Structured improvement of processes, tooling, integrations, data flow, and quality—chosen for practical impact rather than novelty.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="80">
+            <h3>AI &amp; automation</h3>
+            <p>Responsible use of ML and automation where it reduces errors, rework, monitoring burden, or administrative overhead—paired with sensible governance.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="160">
+            <h3>Robotics &amp; sensing</h3>
+            <p>Hardware and software together when physical workloads, repetitive motion, or environmental monitoring materially affect safety and throughput.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section ts-section-muted" id="elderly-care">
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <p class="ts-kicker">One priority domain</p>
+          <h2 class="ts-h2">Elderly care: health span, quality of life, and sustainable operations—not “more tech for desks.”</h2>
+          <div class="ts-care-accent ts-prose mt-4">
+            <p>Residents deserve dignity and attentive care when it matters—not just longevity on paper. Facilities need schedules, staffing ratios, medications, admissions, incidents, billing, reporting, families, regulators, contractors, and emergencies—often with limited margin.</p>
+            <p class="mt-3">TokyoScale is interested in technology that raises <strong>health span</strong> and day‑to‑day wellbeing, strengthens <strong>safety culture</strong>, supports <strong>frontline staff</strong> with less chaos, and makes <strong>sustainable businesses</strong> possible where care stays human.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1">
+          <div class="ts-card" data-aos="fade-left">
+            <h3>Examples of themes we pursue</h3>
+            <ul class="list-unstyled ts-value-list mb-0">
+              <li>Operational visibility without burdening bedside time</li>
+              <li>Automation of repetitive documentation and reconciliation</li>
+              <li>Training and onboarding that fit real shift work</li>
+              <li>Human‑machine collaboration that complements caregivers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section" id="model">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8">
+          <p class="ts-kicker">Acquisition &amp; partnership</p>
+          <h2 class="ts-h2">We acquire, partner with, or support businesses where disciplined technology can compound over years.</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="ts-card h-100" data-aos="fade-up">
+            <h3>Acquire</h3>
+            <p>For owners seeking continuity: we combine capital and capability to renew operations while respecting brand and legacy.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="ts-card h-100" data-aos="fade-up" data-aos-delay="60">
+            <h3>Partner</h3>
+            <p>For leaders who remain involved: governance, delivery, incentives, and a shared roadmap for measured transformation.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="ts-card h-100" data-aos="fade-up" data-aos-delay="120">
+            <h3>Support</h3>
+            <p>For teams not ready for a transaction but serious about upgrading systems: targeted programs with clear milestones.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="ts-card h-100" data-aos="fade-up" data-aos-delay="180">
+            <h3>Selectivity</h3>
+            <p>We take on engagements where fundamentals and leadership commitment make durable change plausible—preferring depth over volume.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section ts-section-muted ts-section-bordered" id="values">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-10">
+          <p class="ts-kicker">How we behave</p>
+          <h2 class="ts-h2">Values that keep technology grounded in outcomes and people.</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="ts-card" data-aos="fade-up">
+            <h3>Human‑centered automation</h3>
+            <p>Automation should relieve people of tedium—not strip away judgment, discretion, or care where they matter.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="50">
+            <h3>Respect for know‑how</h3>
+            <p>We defer to seasoned staff and tacit expertise; engineering serves the business—not the other way around.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Practical AI</h3>
+            <p>Useful models, clear scopes, observable trade‑offs—we avoid inflated claims and speculative roadmaps disconnected from workloads.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="150">
+            <h3>Long‑term ownership</h3>
+            <p>Patches dissolve; ownership means maintaining systems until they reliably pay rent on attention and capital.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4 mb-lg-0">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Better work, better care</h3>
+            <p>When staff spend less energy on breakage, they spend more on judgement, mentorship, kindness, and the small things that differentiate care.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section ts-section-cta ts-cta" id="cta">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <h2>Talk to us about succession, modernization, or elderly care innovation.</h2>
+          <p class="mt-3 mb-0">If you are a business owner, bank, insurer, municipality, adviser, investor, hospital group, facility operator—or a technologist aligned with grounded transformation—we would like to hear from you.</p>
+        </div>
+        <div class="col-lg-4 text-lg-right" data-aos="fade-left">
+          <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-light btn-lg">Contact TokyoScale</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endif %}
 
 {% endblock content %}

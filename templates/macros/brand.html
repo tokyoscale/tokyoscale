@@ -1,0 +1,27 @@
+{# TokyoScale badge — minimalist ascending bars; safe to reuse. #}
+{% macro logo_mark(css_class="") %}
+<svg class="site-logo-mark {{ css_class | trim }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" role="presentation" aria-hidden="true" focusable="false" width="36" height="36">
+  <rect x="6" y="22" width="7" height="10" rx="1.75" fill="#274685"/>
+  <rect x="15.5" y="17" width="7" height="15" rx="1.75" fill="#2c5e97"/>
+  <rect x="25" y="10" width="7" height="22" rx="1.75" fill="#1391a5"/>
+  <path d="M5 34h29v2H5z" fill="#1a3766" opacity=".22"/>
+</svg>
+{% endmacro %}
+
+{# Flag emoji rendered as emoji; fall back to monospace letters on restricted platforms. See CSS .ts-flag-emoji #}
+{% macro lang_switch_icons() %}
+<div class="ts-lang-switch-icons" {% if lang == 'ja' %}aria-label="言語選択"{% else %}aria-label="Language"{% endif %}>
+  <a href="{{ get_url(path='@/_index.md', lang='ja') }}"
+     lang="ja" hreflang="ja"
+     class="ts-lang-btn {% if lang == 'ja' %}is-active{% endif %}"
+     {% if lang == 'ja' %}aria-current="true"{% endif %}
+     aria-label="{% if lang == 'ja' %}日本語（現在）{% else %}Japanese{% endif %}"
+     title="日本語"><span class="ts-flag-emoji" role="presentation">🇯🇵</span></a>
+  <a href="{{ get_url(path='@/_index.md', lang='en') }}"
+     lang="en-US" hreflang="en"
+     class="ts-lang-btn {% if lang == 'en' %}is-active{% endif %}"
+     {% if lang == 'en' %}aria-current="true"{% endif %}
+     aria-label="{% if lang == 'en' %}English (current){% else %}English{% endif %}"
+     title="English"><span class="ts-flag-emoji" role="presentation">🇬🇧</span></a>
+</div>
+{% endmacro %}

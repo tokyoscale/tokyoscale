@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
-{% block title %}{{ page.title }}{% endblock title %}
+{% block title %}
+{% if lang == 'ja' %}お問い合わせ | TokyoScale
+{% else %}{{ page.title }} | TokyoScale
+{% endif %}
+{% endblock title %}
+{% block meta_description %}{{ page.description | default(value="Contact TokyoScale about succession planning, modernization, elderly care, or partnerships.") }}{% endblock meta_description %}
 
 {% block content %}
 <section class="hero-section inner-page">
@@ -36,8 +41,14 @@
       <div class="row mb-5 align-items-end">
         <div class="col-md-6" data-aos="fade-up">
 
-          <h2>Contact Form</h2>
-          <p class="mb-0">Speak to a real human!</p>
+          <h2>{% if lang == 'ja' %}メッセージを送る{% else %}Send a message{% endif %}</h2>
+          <p class="mb-0 text-muted small">
+            {% if lang == 'ja' %}
+            事業者、金融機関・アドバイザー、運営側、自治体、クリニック・施設、エンジニアの方など幅広くお受けします。状況や前提を簡潔に書いていただけると幸いです。
+            {% else %}
+            Owners, bankers, advisers, operators, municipalities, clinicians, technologists—all welcome. We reply thoughtfully; please share context freely.
+            {% endif %}
+          </p>
         </div>
 
       </div>

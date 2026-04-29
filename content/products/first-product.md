@@ -1,16 +1,9 @@
 +++
-title = "Infrastructure as Code Library"
-description = "A collection of over 300,000 lines of reusable, battle-tested, production-ready infrastructure code for AWS, GCP, and Azure."
+title = "IaC ライブラリ（アーカイブ）"
+description = "東京スケイル前期のクラウド基盤向け記事アーカイブ。詳細テキストは英語ページをご利用ください。"
 date = 2020-06-29
 +++
-# You don't have to reinvent the wheel
 
-Most teams have the same basic infrastructure needs: server cluster, load balancer, database, cache, CI/CD, monitoring, secrets management, and so on. Why waste time building it all from scratch? At TokyoScale, we are a team of DevOps experts who have spent thousands of hours creating a library of reusable, battle-tested infrastructure code that has been used in production by hundreds of companies, and now you can leverage all of it with the Infrastructure as Code Library.
+東京スケイルが **DevOps / クラウド基盤** を中心としていた時期に整理した資料です。運用モデルや提供形態が現在のサイトで説明される内容とは異なる場合があります。
 
-# What's in the Library?
-
-The Infrastructure as Code Library consists of 40+ GitHub repos, some open source, some private, each of which contains reusable, battle-tested infrastructure code for AWS, GCP, and Azure, written in Terraform, Go, Bash, and Python. Check out How to use the TokyoScale Infrastructure as Code Library to see how it all works.
-
-# How do I get access to this code?
-
-To get access to all the code in the Infrastructure as Code Library, you must be a TokyoScale Subscriber. Check out the pricing page for details.
+詳細テキスト（英語）は **[英語ページ](/en/products/first-product/)** でご確認ください。

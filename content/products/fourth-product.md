@@ -1,19 +1,9 @@
 +++
-title = "DevOps Training Library"
-description = "A collection of training video courses that teach you DevOps."
-date = 2020-06-30
+title = "DevOps トレーニング資料（アーカイブ）"
+description = "学習コンテンツの記録。本文は英語。"
+date = 2020-06-29
 +++
 
-# Learn DevOps directly from the experts.
+教育・訓練ライブラリに関する過去の紹介です。現行の支援内容とは一致しない場合があります。
 
-At TokyoScale, we've created a library of video training courses that teach a variety of DevOps topics, such as infrastructure as code, Terraform, Docker, Packer, AWS, GCP, security, and more. Each course consists of a series of "micro-videos" of 1-10 minutes each that you can watch your own pace as many times as you like.
-
-Just as with our Infrastructure as Code Library, we regularly grow and update the DevOps Training Library so that TokyoScale Subscribers are always learning the latest techniques and practices.
-
-# How do I get access to the DevOps Training Library?
-
-Access to the DevOps Training Library, including all current courses as well as future updates and additions, is available as part of the TokyoScale Subscription. Check out the pricing page for details.
-
-# Looking for resources to learn DevOps?
-
-You can find a collection of blog posts, talks, and books about DevOps on our DevOps Resources page.
+**[English article](/en/products/fourth-product/)**

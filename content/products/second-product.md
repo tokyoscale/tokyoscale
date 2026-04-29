@@ -1,16 +1,9 @@
 +++
-title = "TokyoScale Landing Zone for AWS"
-description = "Streamline the way you create, configure, and secure AWS accounts."
-date = 2020-06-30
+title = "AWS Landing Zone（アーカイブ）"
+description = "東京スケイル前期の資料。本文は英語。"
+date = 2020-06-29
 +++
-# You don't have to reinvent the wheel
 
-Most teams have the same basic infrastructure needs: server cluster, load balancer, database, cache, CI/CD, monitoring, secrets management, and so on. Why waste time building it all from scratch? At TokyoScale, we are a team of DevOps experts who have spent thousands of hours creating a library of reusable, battle-tested infrastructure code that has been used in production by hundreds of companies, and now you can leverage all of it with the Infrastructure as Code Library.
+開発・インフラ整備時代の設計ノートのアーカイブです。最新の考え方は [トップページ](/) または [会社概要](/about-tokyoscale/) を参照してください。
 
-# What's in the Library?
-
-The Infrastructure as Code Library consists of 40+ GitHub repos, some open source, some private, each of which contains reusable, battle-tested infrastructure code for AWS, GCP, and Azure, written in Terraform, Go, Bash, and Python. Check out How to use the TokyoScale Infrastructure as Code Library to see how it all works.
-
-# How do I get access to this code?
-
-To get access to all the code in the Infrastructure as Code Library, you must be a TokyoScale Subscriber. Check out the pricing page for details.
+**[English article](/en/products/second-product/)**

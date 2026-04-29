@@ -1,32 +1,27 @@
 +++
-title = "About TokyoScale"
+title = "東京スケイルについて"
 template = "works.html"
-description = "We help you build an innovative, environmentally friendly business"
+description = "日本の産業インフラの近代化——エンジニアリング・実行規律・現場の現実への敬意を両立させる変革パートナー。"
 +++
 
-# What we do
-TokyoScale provides corporations a sustainable digital platform to reduce consumption of energy resources, create real impactful value.
+東京スケイルは東京を拠点とします。強い経営者・ブランドとしての知見を持ちながら、承継のタイミング、人手不足、ITの断片化といった論点にも直面している、日本の歴史ある事業と協働しています。
 
-On TokyoScale, you would be able to work from anywhere, contributing your own creation into the shared pool of knowledge and learnings that is kept permanently online, ready to be used and generate earnings to you whenever the creation is utilized or consumed.
+## 信念
 
-With TokyoScale's global distributed pool of talents and accumulated reusable creations, any business idea and organization you would like to build as an entrepreneur, original artists would be bootstrapped with an unprecedented speed and leveraging power.
+ワークフローがより安全になり、騒動が収まり、情報が筋の通った形で動くとき経済も動きます。反復業務や「見えないコスト」を減らし、単に収益だけでなく、**人にとって**意味のある形で変化が起きるときにこそ変革は機能します。
 
-There is predictability in cost and future earning share transparency and certainty governed not purely by verbal promises but made possible by TokyoScale’s codified contractual economy platform. This ensures your creation will earn you the rightful amount based on the impact it contributes to the end users and the overall economy.
+私たちは、汎用的な「AI広告」を掲げる会社でありません。**エンジニアリング**は確かに軸になります――信頼できるシステム、明瞭な所有者、繰り返し可能な納入。とはいえ、ソフトウェアだけで全体が解けることは稀です。導入の順番、統制・ガバナンス、人員計画、調達ロボティクス・センシング、インセンティブ、規制、地理、組合、伝統的ノウハウ――これらが同じテーブルに並びます。
 
-On TokyoScale, your creation can be any of a technical solution, original digital artworks, original published educational material, to the synthesized application, business operations and organization that operate and provide digital content to our end consumers.
+週次の運用会議で崩れる物語より、事前に伝えられる正直なトレードオフを優先します。
 
-# Why we do
-We believe our world's digital economy and each of us as individuals would benefit from a solution that empowers us to live our life the way we find happiness, while making impactful progress to the whole world.
+## 行動規範
 
-We observe that there is an in-efficiency in the way we must organize ourselves centrally, cookie-cutting our work timing , in order to create values. There are growing trends of the young generation of workers who are challenging this, as seen in the pickup trends of gig-economy, freelancing, remote working.
+**約束より仕組み。** 長期計画には、期限がずれミドルにも整合するような構造とインセンティブを優先します。
 
-Being in a similar situation with accountability to make impact, creating an engineering organization that is both centrally located based on the old model, and having to enable remote, multi time zones collaboration between freelance consultant, teams from different company, to happen, we start seeing a feasible solution to make something different in the digital economy as we see it. 
+**暗黙知への敬意。** 組織の記憶は希少資源です。現場で担う人々を支えるものとしてツールが振る舞うべきです。
 
-# How we realize this
-We realize this vision via the concept and supporting platform for an open digital economy.
+**安全側の自動化。** 身体的リスクや利用者への配慮が絡む領域では、切替え経路やエスカレーション説明、「失敗の境界」を可視化することが前提になります。
 
-In which: 
-1. One individual would be able to easily join in the workforce immediately without the uncertainty through tedious interview process or company selection but rather contribute via his current capacity into the global pool of problem to solve, and earn along.
-2. A group of talents, a team, an organization would be able to safely, securely share the idea or problem to solve and match available creations that could be reused or match with teams who can contribute, based on the data driven and codified contractual mechanism.
-3. The sustainable growth and value of the TokyoScale platform come from the 10x efficiency we enable such that more reusable digital assets are accumulated and made impactful by correctly activated to be utilized. Through this, the earning proceeds are fairly, transparently and predictably distributed to all creators. 
+**人への影響を先に。** 介護において収支表だけを良く見せる「効率」は、利用者や前線への負担を静かに移し替えるなら試金石に不合格です。
 
+東京スケイルにはまだ若さがあります。その分、謙虚に――私たちも将来その介在者となる未来に向け、着実な改善を続けていきます。

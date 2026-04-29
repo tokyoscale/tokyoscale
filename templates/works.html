@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
-{% block title %}How It works{% endblock title %}
+{% block title %}{{ page.title }} | TokyoScale{% endblock title %}
+{% block meta_description %}{{ page.description | default(value="TokyoScale | transformation partner for Japanese businesses and elderly care.") }}{% endblock meta_description %}
 
 {% block content %}
 <section class="hero-section inner-page">
@@ -20,9 +21,9 @@
       <div class="row align-items-center">
         <div class="col-12">
           <div class="row justify-content-center">
-            <div class="col-md-7 text-center hero-text">
-              <h1 data-aos="fade-up" data-aos-delay="">{{page.title}}</h1>
-              <p class="mb-5" data-aos="fade-up" data-aos-delay="100">{{page.description}}</p>
+            <div class="col-md-10 col-lg-9 text-center hero-text">
+              <h1 data-aos="fade-up" data-aos-delay="">{{ page.title }}</h1>
+              <p class="mb-5" data-aos="fade-up" data-aos-delay="100">{{ page.description }}</p>
             </div>
           </div>
         </div>
@@ -30,26 +31,13 @@
     </div>
 
   </section>
-    <section class="site-section">
+    <section class="site-section ts-section-muted">
         <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-10 blog-content">
-            <p class="lead">{{ page.content | safe }}</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="site-section">
-        <div class="container">
-        <div class="row">
-            <div class="col-md-6" data-aos="fade-right">
-                <img src="{{ get_url(path="img/undraw_svg_3.png")}}" alt="Image" class="img-fluid">
-            </div>
-            <div class="col-md-6" data-aos="fade-left">
-            <img src="{{ get_url(path="img/undraw_svg_4.png")}}" alt="Image" class="img-fluid">
+            <div class="col-lg-9 ts-home-prose px-3 px-lg-4">
+              {{ page.content | safe }}
             </div>
         </div>
         </div>
     </section>
-
 {% endblock content %}
