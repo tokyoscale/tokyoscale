@@ -1,0 +1,5 @@
+# https://www.tokyoscale.com/ — TokyoScale corporate site (Zola + GitHub Pages)
+User-agent: *
+Allow: /
+
+Sitemap: https://www.tokyoscale.com/sitemap.xml

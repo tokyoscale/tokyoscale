@@ -1,0 +1,545 @@
+/*
+ * TokyoScale — layout and typography overrides (extends SoftLand / Bootstrap).
+ */
+
+.hero-tokyoscale {
+  /* Slightly tighter than template default full-viewport tower */
+  min-height: 560px !important;
+  height: auto !important;
+  padding-bottom: clamp(4rem, 12vh, 7rem);
+  padding-top: clamp(6rem, 18vh, 10rem);
+}
+
+.hero-tokyoscale,
+.hero-tokyoscale > .container > .row {
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+.hero-lead {
+  font-size: 1.125rem !important;
+  line-height: 1.65 !important;
+  max-width: 36rem !important;
+  opacity: 0.95 !important;
+}
+
+@media (max-width: 991px) {
+  .hero-lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.hero-eyebrow {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.75rem !important;
+  font-weight: 600;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.hero-actions .btn-light {
+  color: #1a3566;
+  border: none;
+  font-weight: 600;
+}
+
+.hero-actions .btn-outline-white {
+  font-weight: 600;
+}
+
+/* Section spacing */
+.ts-section {
+  padding-top: clamp(4rem, 10vw, 6.5rem);
+  padding-bottom: clamp(4rem, 10vw, 6.5rem);
+}
+
+.ts-section-muted {
+  background-color: #f8f9fb;
+}
+
+.ts-section-bordered {
+  border-top: 1px solid #e8eaef;
+}
+
+.ts-kicker {
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #4a6892;
+  margin-bottom: 0.65rem;
+}
+
+.ts-h2 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: #151515;
+  margin-bottom: 1rem;
+}
+
+.ts-prose {
+  color: #5c6066;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.ts-prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* Cards / lists */
+.ts-card {
+  background: #fff;
+  border: 1px solid #e8eaef;
+  border-radius: 6px;
+  padding: 1.5rem 1.65rem;
+  height: 100%;
+}
+
+.ts-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.ts-card p {
+  font-size: 0.9625rem;
+  line-height: 1.62;
+  color: #61656c;
+  margin-bottom: 0;
+}
+
+.ts-value-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #4a4d53;
+}
+
+.ts-value-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(-45deg, #1391a5, #274685);
+}
+
+/* Elderly care highlight strip */
+.ts-care-accent {
+  border-left: 4px solid #274685;
+  padding-left: 1.25rem;
+}
+
+/* CTA band (homepage closing section + similar) */
+.ts-cta {
+  background: linear-gradient(to right, rgba(39, 70, 133, 0.93) 0%, rgba(19, 145, 165, 0.88) 100%);
+}
+
+/* Homepage closing CTA — generous top, slightly tighter bottom before footer */
+.ts-section.ts-section-cta {
+  padding-top: clamp(3.75rem, 10vw, 7.25rem);
+  padding-bottom: clamp(2.75rem, 8vw, 5.25rem);
+}
+
+.ts-cta h2 {
+  color: #fff;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.ts-cta p {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+.ts-cta .btn-light {
+  font-weight: 600;
+}
+
+/*
+ * Main ↔ footer transition
+ * - Pull the footer panel slightly upward (less “floating” dead air after the gradient CTA)
+ * - Soften the edge with a short veil matching the footer panel
+ */
+main.ts-main {
+  padding-bottom: 0;
+}
+
+.footer.ts-footer {
+  position: relative;
+  z-index: 2;
+  background: #eef1f6;
+  border-top: 1px solid #dde2eb;
+  /* Overrides SoftLand’s large default footer padding — was creating “ocean” gaps */
+  padding: 0 !important;
+}
+
+/* Gradient veil overlaps the bottom of main content (~2rem) — reads as deliberate closure */
+.footer.ts-footer::before {
+  content: "";
+  display: block;
+  height: 2rem;
+  margin-top: -2rem;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(238, 241, 246, 0) 0%,
+    rgba(238, 241, 246, 0.55) 55%,
+    #eef1f6 100%
+  );
+}
+
+.footer.ts-footer .ts-footer-inner {
+  padding-top: 2.5rem;
+  padding-bottom: 2.75rem;
+}
+
+.footer.ts-footer .ts-footer-brand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.footer.ts-footer .ts-footer-logo-link:hover {
+  opacity: 0.88;
+  color: #111 !important;
+}
+
+.footer.ts-footer .ts-footer-heading {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #2a2d33;
+  margin-bottom: 0.85rem;
+}
+
+.footer.ts-footer .ts-footer-lead {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #4d525a !important;
+  max-width: 28rem;
+}
+
+.footer.ts-footer .footer-links a,
+.footer.ts-footer .ts-footer-links a {
+  color: #5a5f66;
+  font-size: 0.95rem;
+}
+
+.footer.ts-footer .footer-links a:hover,
+.footer.ts-footer .ts-footer-links a:hover {
+  color: #111;
+}
+
+/* Footer: horizontal link row (middots), aligned with desktop nav metaphor */
+.footer.ts-footer .ts-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  row-gap: 0.35rem;
+  column-gap: 0;
+}
+
+.footer.ts-footer .ts-footer-links li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer.ts-footer .ts-footer-links li:not(:first-child)::before {
+  content: '·';
+  color: #b8bcc4;
+  margin: 0 0.6rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Brand lockup in header — override legacy white-on-banner rule safely */
+.site-navbar .site-logo .site-logo-brand {
+  color: #111827 !important;
+}
+
+.site-navbar .site-logo-brand:hover {
+  opacity: 0.88;
+  text-decoration: none;
+}
+
+.site-navbar .site-logo-mark {
+  flex-shrink: 0;
+}
+
+.site-navbar .site-logo-text {
+  letter-spacing: -0.025em;
+}
+
+/* Decorative mood panels — inline SVG monochrome / duotone (see macros/mood.html) */
+.ts-mood-panel {
+  margin: 0 auto;
+  max-width: 320px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(15, 20, 30, 0.28), 0 0 1px rgba(255, 255, 255, 0.06) inset;
+}
+.ts-mood-panel svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Optional licensed JPG/WebP in static/img/… — monochrome + cover for brand calm */
+.ts-mood-panel--photo {
+  padding: 0;
+  max-width: min(320px, 92vw);
+}
+.ts-mood-panel--photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(42vh, 320px);
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.06);
+}
+
+/* Homepage hero gradient: darken shadow so illustration reads crisp */
+.hero-tokyoscale .ts-mood-panel {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Homepage #priority-sectors — compact mood illustrations */
+.ts-section-mood-accent {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .ts-section-mood-accent .ts-mood-panel {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* Smaller radius than default 24px so short tiles don’t “eat” corners; no max-height —
+   let width cap preserve 280×220 aspect ratio (avoids cramped / visually cropped art). */
+.ts-section-mood-accent .ts-mood-panel {
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 14px;
+}
+.ts-section-mood-accent .ts-mood-panel svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+/* Dialogue motif: modestly wider tile, same aspect ratio as other sector moods */
+.ts-section-mood-accent .ts-mood-panel--dialogue {
+  max-width: 248px;
+}
+
+/* Hero mood: respect 280×220 aspect ratio inside max-width (matches sector tiles — avoids clipped art) */
+.hero-tokyoscale .ts-hero-mood-col .ts-mood-panel {
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 36px rgba(12, 18, 32, 0.22);
+  border-radius: 16px;
+}
+@media (min-width: 992px) {
+  .hero-tokyoscale .ts-hero-mood-col .ts-mood-panel {
+    max-width: 240px;
+  }
+}
+.hero-tokyoscale .ts-hero-mood-col .ts-mood-panel svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.hero-tokyoscale .ts-hero-mood-col .ts-mood-panel--photo img {
+  max-height: min(200px, 38vh);
+}
+
+/*
+ * Inner-page heroes: SoftLand pulls .hero-text up with translate and forces tall rows —
+ * the decorative wave (.z-index:1) sits on top unless we reset and layer.
+ */
+.hero-section.inner-page.hero-with-mood {
+  height: auto;
+  min-height: 42vh;
+  padding-bottom: clamp(7rem, 20vw, 11rem);
+  /* Clear absolute / sticky header band */
+  padding-top: clamp(4.5rem, 10vw, 6rem);
+}
+.hero-section.inner-page.hero-with-mood > .container {
+  position: relative;
+  z-index: 2;
+}
+.hero-section.inner-page.hero-with-mood > .container > .row {
+  min-height: 0 !important;
+  height: auto !important;
+}
+.hero-section.inner-page.hero-with-mood .hero-text {
+  transform: none !important;
+  margin-top: 0 !important;
+}
+
+/*
+ * Homepage hero: do NOT shrink padding-top — a previous override used ~2–3.5rem only and
+ * collapsed content under the absolutely-positioned / sticky header (logo overlap bug).
+ * Keep clearance >= static nav height (~72–96px).
+ */
+.hero-section.hero-tokyoscale.hero-with-mood:not(.inner-page) {
+  min-height: 0;
+  height: auto;
+  padding-top: clamp(5.75rem, 14vw, 10rem);
+  padding-bottom: clamp(8rem, 18vw, 13rem);
+}
+.hero-section.hero-tokyoscale.hero-with-mood:not(.inner-page) > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Sticky header must win paint order over hero .container { z-index:2 } (global SoftLand) */
+.sticky-wrapper {
+  z-index: 5000 !important;
+}
+.sticky-wrapper.is-sticky {
+  z-index: 5000 !important;
+}
+.hero-section.hero-with-mood > .container > .row {
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+/* Inner-page hero typography (works/contact) */
+.hero-section.inner-page h1 {
+  font-size: clamp(2rem, 5vw, 2.85rem);
+}
+
+/* Inner heroes with mood: reduce crowding above the fold */
+.hero-section.inner-page.hero-with-mood .hero-text {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 992px) {
+  .hero-section.inner-page.hero-with-mood .hero-text.text-lg-start {
+    margin-left: 0;
+    text-align: left !important;
+  }
+}
+
+/* Header: keep primary nav + language on one row (desktop) */
+.site-navbar .ts-header-end {
+  gap: 0.25rem 0.5rem;
+}
+
+.site-navbar .ts-header-end .site-menu > li > a.nav-link {
+  padding-left: 0.45rem;
+  padding-right: 0.45rem;
+  font-size: 0.9rem;
+}
+
+/* Language toggle: emoji flags inside compact chips — no duplicate “Lang” label */
+.site-navbar .ts-lang-wrap {
+  flex-shrink: 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 2px 0 2px 1rem;
+}
+
+.ts-lang-switch-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+}
+
+.ts-lang-switch-icons .ts-lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.05rem;
+  height: 2.05rem;
+  padding: 0 4px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.55);
+  line-height: 1;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ts-lang-switch-icons .ts-lang-btn:hover {
+  border-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.ts-lang-switch-icons .ts-lang-btn.is-active {
+  border-color: rgba(39, 70, 133, 0.45);
+  background: rgba(39, 70, 133, 0.08);
+  box-shadow: 0 0 0 1px rgba(39, 70, 133, 0.12);
+}
+
+.ts-flag-emoji {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+/* Mobile header + drawer: tighter icon row */
+.site-mobile-lang .ts-lang-switch-icons .ts-lang-btn {
+  width: auto;
+}
+
+/* Markdown body (works template) */
+.ts-home-prose :where(h2) {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  color: #141414;
+}
+
+.ts-home-prose :where(h2):first-child {
+  margin-top: 0;
+}
+
+.ts-home-prose :where(h3) {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 1.75rem;
+  margin-bottom: 0.6rem;
+  color: #1c1d1f;
+}
+
+.ts-home-prose :where(p) {
+  color: #4f5359;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  font-size: 1.02rem;
+}
+
+.ts-home-prose :where(p + p) {
+  margin-top: 0.75rem;
+}
+
+.ts-home-prose :where(ul) {
+  margin: 1rem 0 1rem 1.1rem;
+  padding-left: 0;
+  color: #4f5359;
+}
+
+.ts-home-prose :where(ul > li) {
+  margin-bottom: 0.4rem;
+  line-height: 1.62;
+}
+
+.ts-home-prose :where(li > ul) {
+  margin-top: 0.35rem;
+}
