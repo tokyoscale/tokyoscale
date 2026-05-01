@@ -84,45 +84,37 @@
     </div>
   </section>
 
-  <section class="ts-section ts-section-muted" id="elderly-care">
+  <section class="ts-section ts-section-bordered" id="priority-sectors">
     <div class="container">
-      <div class="row align-items-start">
-        <div class="col-lg-7 mb-4 mb-lg-0">
-          <p class="ts-kicker">重点テーマの一つ</p>
-          <h2 class="ts-h2">介護・高齢者施設――延命のみならず、健康寿命と生活の質、そして運営の持続へ。</h2>
-          <div class="ts-care-accent ts-prose mt-4">
-            <p>ご利用者の尊厳と「いま」を支えるために、情報が必要です。現場にはシフト計画・投薬・アセス・請求・届出・家族対応まで同時並行があり、しかも収益環境は厳しい。このジレンマに、バックオフィスの画面追加だけでは勝てません。</p>
-            <p class="mt-3">東京スケイルは<strong>健康寿命</strong>へつながる観察・支援ロジック・安全文化・夜間運営の負けにくさに関心があります。ヒューマンケアへ立ち返るための自動化だけを選択します。</p>
-          </div>
-          <p class="small text-muted mb-0 mt-3 mb-lg-3">介護での「対話」を表すモチーフです。ご相談は<a href="{{ get_url(path='@/contact.md', lang=lang) }}">お問い合わせ</a>へ。</p>
+      <div class="row mb-5">
+        <div class="col-lg-10">
+          <p class="ts-kicker">重点テーマ</p>
+          <h2 class="ts-h2">介護・農業・製造・不動産の現場に、同じ規律で向き合います。</h2>
+          <p class="ts-prose mb-2">シフトと届出に追われる介護から、担い手が減る産業と設備・データが散乱する工場、複雑化するポートフォリオまで——いずれも「画面を増やす」こと自体が目的ではなく、<strong>計測できる意思決定と、人が握るべき裁量</strong>の切り分けが先です。</p>
+          <p class="small mb-0 text-muted">介護のご相談は<a href="{{ get_url(path='@/contact.md', lang=lang) }}">お問い合わせ</a>へ。農業・製造・不動産は専用ページ：<a href="{{ get_url(path='@/farming.md', lang=lang) }}">農業・一次産業</a> · <a href="{{ get_url(path='@/factories.md', lang=lang) }}">製造・工場</a> · <a href="{{ get_url(path='@/real-estate.md', lang=lang) }}">不動産・資産運用</a>（サイト上部ナビからもご利用いただけます）。</p>
         </div>
-        <div class="col-lg-4 offset-lg-1 mb-4 mb-lg-0 ts-section-mood-elderly-wrap">
-          {{ mood::mood_svg(kind="dialogue") }}
-          <div class="ts-card mt-4" data-aos="fade-left">
-            <h3>関心があるテーマの例</h3>
-            <ul class="list-unstyled ts-value-list mb-0">
+      </div>
+
+      <div id="elderly-care" class="row align-items-start mb-5 pb-5 border-bottom">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <p class="ts-kicker mb-1">介護・高齢者施設</p>
+          <h3 class="h4 font-weight-bold mb-3">延命のみならず、健康寿命と生活の質、そして運営の持続へ。</h3>
+          <div class="ts-care-accent ts-prose">
+            <p>ご利用者の尊厳と「いま」を支えるために、情報が必要です。現場にはシフト計画・投薬・アセス・請求・届出・家族対応まで同時並行があり、しかも収益環境は厳しい。このジレンマに、バックオフィスの画面追加だけでは勝てません。</p>
+            <p class="mt-3 mb-0">東京スケイルは<strong>健康寿命</strong>へつながる観察・支援ロジック・安全文化・夜間運営の負けにくさに関心があります。ヒューマンケアへ立ち返るための自動化だけを選択します。</p>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 ts-home-sector-mood">
+          <div class="ts-section-mood-accent mb-3">{{ mood::mood_svg(kind="dialogue") }}</div>
+          <div class="ts-card">
+            <ul class="list-unstyled ts-value-list mb-4 small">
               <li>ベッドサイド時間を削らずに共有される「いま」の可視化</li>
               <li>伝票処理・突合作業への機械的正確さ</li>
               <li>シフト運用現実に合わせた学習・訓練</li>
               <li>介護者が補完される協働ロボット／センシング</li>
             </ul>
+            <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">お問い合わせ</a>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="ts-section ts-section-bordered" id="priority-sectors">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-10">
-          <p class="ts-kicker">重点テーマ（農業・製造・不動産）</p>
-          <h2 class="ts-h2">介護と並行して、一次産業・ものづくり・資産運用の現場にも同じ規律で向き合います。</h2>
-          <p class="ts-prose mb-2">担い手が減る産業と、設備とデータが散乱する工場、複雑化するポートフォリオ——いずれも「画面を増やす」こと自体が目的ではなく、<strong>計測できる意思決定と、人が握るべき裁量</strong>の切り分けが先です。</p>
-          <p class="small mb-0 text-muted">長文は専用ページにまとめています：
-            <a href="{{ get_url(path='@/farming.md', lang=lang) }}">農業・一次産業</a> ·
-            <a href="{{ get_url(path='@/factories.md', lang=lang) }}">製造・工場</a> ·
-            <a href="{{ get_url(path='@/real-estate.md', lang=lang) }}">不動産・資産運用</a>（サイト上部ナビからもご利用いただけます）。</p>
         </div>
       </div>
 
@@ -358,46 +350,41 @@
     </div>
   </section>
 
-  <section class="ts-section ts-section-muted" id="elderly-care">
+  <section class="ts-section ts-section-bordered" id="priority-sectors">
     <div class="container">
-      <div class="row align-items-start">
-        <div class="col-lg-7 mb-4 mb-lg-0">
-          <p class="ts-kicker">One priority domain</p>
-          <h2 class="ts-h2">Elderly care: health span, quality of life, and sustainable operations—not “more tech for desks.”</h2>
-          <div class="ts-care-accent ts-prose mt-4">
-            <p>Residents deserve dignity and attentive care when it matters—not just longevity on paper. Facilities need schedules, staffing ratios, medications, admissions, incidents, billing, reporting, families, regulators, contractors, and emergencies—often with limited margin.</p>
-            <p class="mt-3">TokyoScale is interested in technology that raises <strong>health span</strong> and day‑to‑day wellbeing, strengthens <strong>safety culture</strong>, supports <strong>frontline staff</strong> with less chaos, and makes <strong>sustainable businesses</strong> possible where care stays human.</p>
-          </div>
-          <p class="small text-muted mb-0 mt-3 mb-lg-3">A “dialogue” motif for elderly-care collaboration. Reach us via <a href="{{ get_url(path='@/contact.md', lang=lang) }}">Contact</a>.</p>
+      <div class="row mb-5">
+        <div class="col-lg-10">
+          <p class="ts-kicker">Focus areas</p>
+          <h2 class="ts-h2">Elderly care, agriculture, manufacturing, and real estate—one disciplined operating lens.</h2>
+          <p class="ts-prose mb-2">Care facilities juggling shifts and regulators, labor‑scarce agriculture, fragmented shop‑floor telemetry, multitenant portfolios—none of these are solved by <strong>more dashboards for their own sake</strong>. We start by separating <strong>what should be measurable</strong> from <strong>what must stay human‑judged</strong>.</p>
+          <p class="small mb-0 text-muted">For elderly care, use <a href="{{ get_url(path='@/contact.md', lang=lang) }}">Contact</a>. Full briefs for agriculture, manufacturing, and real estate:
+            <a href="{{ get_url(path='@/farming.md', lang=lang) }}">Agriculture</a>,
+            <a href="{{ get_url(path='@/factories.md', lang=lang) }}">Manufacturing</a>,
+            <a href="{{ get_url(path='@/real-estate.md', lang=lang) }}">Real estate</a>
+            —also in the header.</p>
         </div>
-        <div class="col-lg-4 offset-lg-1 mb-4 mb-lg-0 ts-section-mood-elderly-wrap">
-          {{ mood::mood_svg(kind="dialogue") }}
-          <div class="ts-card mt-4" data-aos="fade-left">
-            <h3>Examples of themes we pursue</h3>
-            <ul class="list-unstyled ts-value-list mb-0">
+      </div>
+
+      <div id="elderly-care" class="row align-items-start mb-5 pb-5 border-bottom">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <p class="ts-kicker mb-1">Elderly care</p>
+          <h3 class="h4 font-weight-bold mb-3">Health span, quality of life, and sustainable operations—not “more tech for desks.”</h3>
+          <div class="ts-care-accent ts-prose">
+            <p>Residents deserve dignity and attentive care when it matters—not just longevity on paper. Facilities need schedules, staffing ratios, medications, admissions, incidents, billing, reporting, families, regulators, contractors, and emergencies—often with limited margin.</p>
+            <p class="mt-3 mb-0">TokyoScale is interested in technology that raises <strong>health span</strong> and day‑to‑day wellbeing, strengthens <strong>safety culture</strong>, supports <strong>frontline staff</strong> with less chaos, and makes <strong>sustainable businesses</strong> possible where care stays human.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 ts-home-sector-mood">
+          <div class="ts-section-mood-accent mb-3">{{ mood::mood_svg(kind="dialogue") }}</div>
+          <div class="ts-card">
+            <ul class="list-unstyled ts-value-list mb-4 small">
               <li>Operational visibility without burdening bedside time</li>
               <li>Automation of repetitive documentation and reconciliation</li>
               <li>Training and onboarding that fit real shift work</li>
               <li>Human‑machine collaboration that complements caregivers</li>
             </ul>
+            <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">Contact us</a>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="ts-section ts-section-bordered" id="priority-sectors">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-10">
-          <p class="ts-kicker">Focus areas (agriculture, manufacturing, real estate)</p>
-          <h2 class="ts-h2">Alongside elder care: the same disciplined lens on farms, factories, and asset-heavy portfolios.</h2>
-          <p class="ts-prose mb-2">Labor‑scarce agriculture, fragmented shop‑floor telemetry, multitenant portfolios—none of these are solved by <strong>more dashboards for their own sake</strong>. We start by separating <strong>what should be measurable</strong> from <strong>what must stay human‑judged</strong>.</p>
-          <p class="small mb-0 text-muted">Full briefs live on standalone pages —
-            <a href="{{ get_url(path='@/farming.md', lang=lang) }}">Agriculture</a>,
-            <a href="{{ get_url(path='@/factories.md', lang=lang) }}">Manufacturing</a>,
-            <a href="{{ get_url(path='@/real-estate.md', lang=lang) }}">Real estate</a>
-            —also linked in the header.</p>
         </div>
       </div>
 

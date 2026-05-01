@@ -27,16 +27,16 @@ Examples include integrations, robotics or sensing pilots, pragmatic ML where si
 
 ## 3. Build adoption alongside software
 
-Hands stay alongside your teams—not a distant help desk ticketing queue. Practical training escalation drills documentation small enough people will open it.
+We embed with your teams—not only through a distant service-desk queue. Training runs, escalation checks, and documentation kept lean enough that people actually use it.
 
-In elderly care, we move deliberately: fewer simultaneous experiments quieter nights fewer ambiguous alerts—we respect schedule reality and morale.
+In elderly care we pace deliberately: fewer experiments in parallel, calmer nights, clearer alerts—we respect roster reality and morale.
 
 ## 4. Operate—and improve
 
-Someone must keep systems truthful as vendors versions regulations teams shift. Stewardship—not abandonment—is the default stance we prefer.
+As vendors ship updates, regulations change, and teams turn over, someone has to keep systems accurate and trustworthy. Stewardship—not handoff and abandonment—is the stance we prefer by default.
 
-Acquisition or partnership structuring is bespoke; financial legal HR succession culture topics surface candidly—we avoid magical thinking about seamless rebirth overnight.
+M&A or partnership shape is bespoke; finance, legal, HR, succession, and culture topics come up plainly—we steer clear of magical thinking about frictionless overnight rebirth.
 
 ### Next step
 
-If this matches how you want change to occur contact us—even for an early feasibility conversation prior to inertia hardening prematurely.
+If this sounds like the pace you want, [contact us](../contact/)—even for an early feasibility conversation before paths harden prematurely.

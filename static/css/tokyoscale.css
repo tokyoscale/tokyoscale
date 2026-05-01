@@ -315,49 +315,53 @@ main.ts-main {
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Homepage #elderly-care (dialogue) & #priority-sectors teasers — compact on muted background */
-.ts-section-mood-elderly-wrap .ts-mood-panel {
-  max-width: 260px;
-}
-.ts-section-mood-elderly-wrap .ts-mood-panel svg {
-  max-height: 200px;
-}
+/* Homepage #priority-sectors — compact mood illustrations */
 .ts-section-mood-accent {
   text-align: center;
 }
 @media (min-width: 992px) {
-  .ts-section-mood-accent .ts-mood-panel,
-  .ts-section-mood-elderly-wrap .ts-mood-panel {
+  .ts-section-mood-accent .ts-mood-panel {
     margin-left: 0;
     margin-right: 0;
   }
 }
+/* Smaller radius than default 24px so short tiles don’t “eat” corners; no max-height —
+   let width cap preserve 280×220 aspect ratio (avoids cramped / visually cropped art). */
 .ts-section-mood-accent .ts-mood-panel {
   max-width: 220px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 14px;
 }
 .ts-section-mood-accent .ts-mood-panel svg {
-  max-height: 150px;
-  width: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+/* Dialogue motif: modestly wider tile, same aspect ratio as other sector moods */
+.ts-section-mood-accent .ts-mood-panel--dialogue {
+  max-width: 248px;
 }
 
-/* Hero mood: decorative accent only — avoid competing with headline for vertical space */
+/* Hero mood: respect 280×220 aspect ratio inside max-width (matches sector tiles — avoids clipped art) */
 .hero-tokyoscale .ts-hero-mood-col .ts-mood-panel {
   max-width: 220px;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 10px 36px rgba(12, 18, 32, 0.22);
+  border-radius: 16px;
 }
 @media (min-width: 992px) {
   .hero-tokyoscale .ts-hero-mood-col .ts-mood-panel {
     max-width: 240px;
   }
 }
-.hero-tokyoscale .ts-hero-mood-col .ts-mood-panel--horizon svg,
-.hero-tokyoscale .ts-hero-mood-col .ts-mood-panel--hero svg {
-  max-height: 178px;
-  width: auto;
+.hero-tokyoscale .ts-hero-mood-col .ts-mood-panel svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
 }
 .hero-tokyoscale .ts-hero-mood-col .ts-mood-panel--photo img {
   max-height: min(200px, 38vh);

@@ -9,7 +9,7 @@
 <figure class="ts-mood-panel ts-mood-panel--{{ kind }}" aria-hidden="true">
 {% if kind == "horizon" %}
   {# Solid layers only — avoids duplicate gradient #id when many “horizon” SVGs render on one page #}
-  <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
+  <svg viewBox="0 0 280 220" overflow="visible" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
     <rect width="280" height="220" fill="#121923"/>
     <rect width="280" height="118" fill="#1391a5" opacity="0.14"/>
     <path fill="rgba(255,255,255,.04)" d="M0 180 L60 150 L140 165 L220 138 L280 155 L280 220 L0 220 Z"/>
@@ -19,7 +19,7 @@
   </svg>
 {% elif kind == "hero" %}
   {# Homepage hero: scale / pipeline — aligns with blueprint operator story (not landscape “postcard”). #}
-  <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
+  <svg viewBox="0 0 280 220" overflow="visible" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
     <rect width="280" height="220" fill="#101520"/>
     <g stroke="rgba(255,255,255,.09)" stroke-width="1">
       <line x1="28" y1="44" x2="252" y2="44"/><line x1="28" y1="74" x2="252" y2="74"/><line x1="28" y1="104" x2="252" y2="104"/>
@@ -35,7 +35,7 @@
     <circle cx="246" cy="82" r="6" stroke="rgba(255,255,255,.55)" stroke-width="1.2" fill="#101520"/>
   </svg>
 {% elif kind == "foundation" %}
-  <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
+  <svg viewBox="0 0 280 220" overflow="visible" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
     <rect width="280" height="220" fill="#0f1419"/>
     <g fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.5)" stroke-width="1">
       <rect x="36" y="148" width="34" height="52" rx="3"/>
@@ -72,7 +72,7 @@
     <circle cx="140" cy="64" r="22" stroke="rgba(255,255,255,.32)" stroke-width="1.1" fill="none"/>
   </svg>
 {% elif kind == "dialogue" %}
-  <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
+  <svg viewBox="0 0 280 220" overflow="visible" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
     <rect width="280" height="220" fill="#0e1218"/>
     <circle cx="88" cy="96" r="44" stroke="rgba(255,255,255,.55)" stroke-width="1.2" fill="none"/>
     <circle cx="188" cy="126" r="52" stroke="rgba(255,255,255,.38)" stroke-width="1" fill="rgba(255,255,255,.03)"/>
@@ -104,7 +104,7 @@
     <rect x="40" y="150" width="200" height="26" rx="3" stroke="rgba(255,255,255,.35)" stroke-width="1" fill="rgba(19,145,165,.06)"/>
   </svg>
 {% elif kind == "detail" %}
-  <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
+  <svg viewBox="0 0 280 220" overflow="visible" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
     <rect width="280" height="220" fill="#0f131a"/>
     <g stroke="rgba(255,255,255,.22)" stroke-width="1">
       <line x1="40" y1="48" x2="240" y2="48"/><line x1="40" y1="68" x2="240" y2="68"/><line x1="40" y1="88" x2="240" y2="88"/>
