@@ -2,11 +2,11 @@
 {% import "macros/mood.html" as mood %}
 
 {%- block title -%}
-{%- if lang == 'ja' -%}東京スケイル | 次世代の産業を支えるテクノロジー・オペレーター{%- else -%}TokyoScale | Technology operator for Japan’s next generation of businesses{%- endif -%}
+{%- if lang == 'ja' -%}東京スケイル | ユーティリティ・IoT・製造の計測とダッシュボード{%- else -%}TokyoScale | Utility metering, IoT, manufacturing dashboards &amp; cloud platforms{%- endif -%}
 {%- endblock title -%}
 
 {%- block meta_description -%}
-{%- if lang == 'ja' -%}承継や人手不足に直面する産業向けに、AI・ロボティクス・自動化と運用規律を組み合わせる日本拠点のパートナー。介護を含む現場に根ざした変革を目指します。{%- else -%}Japan-based operator and transformation partner: AI, robotics, automation, and software for succession-ready businesses—with a focus on sustainable elderly care operations.{%- endif -%}
+{%- if lang == 'ja' -%}水道・ガス・電力メーターと製造現場のIoTを、クラウドとAIでつなぎ、オペレーター向けダッシュボードまで一気通貫で設計・運用するパートナー。{%- else -%}We connect water, gas, and electric meters with shop-floor IoT—cloud platforms, practical AI, and operator dashboards built end to end.{%- endif -%}
 {%- endblock meta_description -%}
 
 {% block content %}
@@ -17,15 +17,14 @@
     <div class="container">
       <div class="row align-items-start align-items-lg-center justify-content-lg-between gx-lg-4 ts-hero-home-row">
         <div class="col-lg-7 hero-text-image text-center text-lg-left mb-4 mb-lg-0">
-              <p class="hero-eyebrow" data-aos="fade-right">日本 · 変革 · 経営との共創</p>
-              <h1 data-aos="fade-right">AI・ロボティクス・自動化と運用の規律で、事業そのものを強くする。</h1>
+              <p class="hero-eyebrow" data-aos="fade-right">ユーティリティ · IoT · クラウド · AI</p>
+              <h1 data-aos="fade-right">計測からダッシュボードまで——水道・ガス・電力と製造現場を、一つの運用体験に。</h1>
               <p class="mb-4 hero-lead" data-aos="fade-right" data-aos-delay="100">
-                東京スケイルは典型的な SI 型の立ち位置だけを目指していません。伝統的な事業の承継・人手・ITの断片化に悩む経営ともに、買収・提携・伴走を通じて、現場が持続するシステムへ置き換えていきます。
+                東京スケイルはメーター・バルブ・センサーとクラウドをつなぎ、MQTTで数千台を束ね、現場オペレーターが信頼できる画面とレポートを届けます。ハード選定からAIによる異常検知、製造ラインの可視化まで。
               </p>
               <div class="hero-actions" data-aos="fade-right" data-aos-delay="180">
                 <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-light mr-2 mb-2 mb-sm-0">お問い合わせ</a>
-                <a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}" class="btn btn-outline-white mr-2 mb-2 mb-sm-0">会社概要</a>
-                <a href="{{ get_url(path='@/how-it-works.md', lang=lang) }}" class="btn btn-outline-white mb-2 mb-sm-0">進め方</a>
+                <a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}" class="btn btn-outline-white mb-2 mb-sm-0">会社概要</a>
               </div>
         </div>
         <div class="col-auto col-md-10 col-lg-4 col-xl-3 mx-auto ms-lg-auto text-center mt-3 mt-lg-0 px-3 px-lg-2 ts-hero-mood-col" data-aos="fade-left" data-aos-delay="60">
@@ -42,11 +41,11 @@
       <div class="row justify-content-lg-between align-items-start">
         <div class="col-lg-5 mb-4 mb-lg-0">
           <p class="ts-kicker">背景</p>
-          <h2 class="ts-h2">日本の有力企業は深いノウハウを持ちながら、構造的な圧力にもさらされています。</h2>
+          <h2 class="ts-h2">ユーティリティと製造現場は、計測データがバラバラなまま増え続けています。</h2>
         </div>
         <div class="col-lg-6 ts-prose">
-          <p>オーナー世代の交替、人材の流動、バラバラなデジタル化――「意志がない」のではなく、変化が経営・安全・現場の両立を難しくしているのが実情です。単発のシステム案件では、運用のほころびを取り切れません。</p>
-          <p class="mt-3"><strong>介護・福祉</strong>は代表例であり、ニーズ・規制・マージンの制約が同時進行しています。技術は、画面増殖のためではなく、負荷とリスクが下がる方向にだけ働いてほしいと私たちは考えます。</p>
+          <p>水道・ガス・電力メーター、揚水ポンプ、ガス調整点、工場の流量・電力——ベンダーもプロトコルも違う。ダッシュボードを足しても、<strong>異常の定義</strong>と<strong>誰が動くか</strong>が揃わなければ現場は使いません。</p>
+          <p class="mt-3">東京スケイルは、実績のある計装メーカーとクラウド基盤を組み合わせ、MQTT・時系列DB・オペレーターUIまでを一つの製品として設計します。AIは、信号があるところにだけ、説明可能な形で載せます。</p>
         </div>
       </div>
     </div>
@@ -57,84 +56,64 @@
       <div class="row mb-5">
         <div class="col-lg-10 mx-auto text-center">
           <p class="ts-kicker">提供するもの</p>
-          <h2 class="ts-h2">ソフトウェア／AI／ロボティクス／自動化に、結果に責任を持つ当事者視点。</h2>
-          <p class="ts-prose mx-auto mt-3">引き継ぎ・例外処理・見えない作業時間——現場での実態を優先順位へ落とし、磨き込みより先に評価が破綻しない導線を組みます。</p>
+          <h2 class="ts-h2">計装ハードウェア · クラウド · AI — 現場が使うダッシュボードまで。</h2>
+          <p class="ts-prose mx-auto mt-3">メーターとバルブの選定、MQTTデバイス台帳、時系列データ、SCADA風の監視画面、定期レポート、異常検知——「画面を増やす」のではなく、運用の一本線をつくります。</p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
           <div class="ts-card" data-aos="fade-up">
-            <h3>業務プロセス／システム</h3>
-            <p>プロセス設計・ツール選定・連携・データ品質への投資――流行よりも再現できる成果へ。</p>
+            <h3>ユーティリティ &amp; IoT</h3>
+            <p>スマート水道メーター、電動バルブ、ガス調整点、揚水ポンプ——NB-IoT・LoRa・MQTTで束ね、7,000台規模の台帳管理から単一拠点のSCADAまで。</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
           <div class="ts-card" data-aos="fade-up" data-aos-delay="80">
-            <h3>AI と自動化</h3>
-            <p>誤り・再入力・検知業務への負担を現実に下げられるところに限定し、運用でのガバナンスを欠かしません。</p>
+            <h3>クラウド基盤</h3>
+            <p>デバイス認証、時系列ストア、API、マルチテナントのクライアントダッシュボード。現場と本部で同じ数字が見える設計。</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="ts-card" data-aos="fade-up" data-aos-delay="160">
-            <h3>ロボティクス・センシング</h3>
-            <p>搬送や反復運動・環境モニタが安全と生産性に直結するときだけ、ハード／ソフトを一体で検討します。</p>
+            <h3>AI &amp; 製造</h3>
+            <p>漏洩・異常使用量・設備故障のパターン検知。製造ラインの流量・電力・振動——閾値とエスカレーションを先に決め、信号がある領域にだけMLを載せます。</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="ts-section ts-section-bordered" id="priority-sectors">
+  <section class="ts-section ts-section-bordered" id="focus-areas">
     <div class="container">
       <div class="row mb-5">
         <div class="col-lg-10">
-          <p class="ts-kicker">重点テーマ</p>
-          <h2 class="ts-h2">介護・農業・製造・不動産の現場に、同じ規律で向き合います。</h2>
-          <p class="ts-prose mb-2">シフトと届出に追われる介護から、担い手が減る産業と設備・データが散乱する工場、複雑化するポートフォリオまで——いずれも「画面を増やす」こと自体が目的ではなく、<strong>計測できる意思決定と、人が握るべき裁量</strong>の切り分けが先です。</p>
-          <p class="small mb-0 text-muted">介護のご相談は<a href="{{ get_url(path='@/contact.md', lang=lang) }}">お問い合わせ</a>へ。農業・製造・不動産は専用ページ：<a href="{{ get_url(path='@/farming.md', lang=lang) }}">農業・一次産業</a> · <a href="{{ get_url(path='@/factories.md', lang=lang) }}">製造・工場</a> · <a href="{{ get_url(path='@/real-estate.md', lang=lang) }}">不動産・資産運用</a>（サイト上部ナビからもご利用いただけます）。</p>
+          <p class="ts-kicker">重点領域</p>
+          <h2 class="ts-h2">ユーティリティ · 製造 · クラウド／AI — 計測から意思決定まで。</h2>
+          <p class="ts-prose mb-2">メーター台帳、揚水ポンプのSCADA、工場の流量・電力——いずれも<strong>ダッシュボードを増やすこと</strong>が目的ではなく、<strong>何を異常とみなし、誰が動くか</strong>を先に決めることが先です。</p>
+          <p class="small mb-0 text-muted">詳細ページ：<a href="{{ get_url(path='@/utility-monitoring.md', lang=lang) }}">ユーティリティ計測</a> · <a href="{{ get_url(path='@/factories.md', lang=lang) }}">製造・工場</a> · <a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}">私たちについて</a></p>
         </div>
       </div>
 
-      <div id="elderly-care" class="row align-items-start mb-5 pb-5 border-bottom">
+      <div id="utilities-sector" class="row align-items-start mb-5 pb-5 border-bottom">
         <div class="col-lg-7 mb-4 mb-lg-0">
-          <p class="ts-kicker mb-1">介護・高齢者施設</p>
-          <h3 class="h4 font-weight-bold mb-3">延命のみならず、健康寿命と生活の質、そして運営の持続へ。</h3>
-          <div class="ts-care-accent ts-prose">
-            <p>ご利用者の尊厳と「いま」を支えるために、情報が必要です。現場にはシフト計画・投薬・アセス・請求・届出・家族対応まで同時並行があり、しかも収益環境は厳しい。このジレンマに、バックオフィスの画面追加だけでは勝てません。</p>
-            <p class="mt-3 mb-0">東京スケイルは<strong>健康寿命</strong>へつながる観察・支援ロジック・安全文化・夜間運営の負けにくさに関心があります。ヒューマンケアへ立ち返るための自動化だけを選択します。</p>
-          </div>
-        </div>
-        <div class="col-lg-4 offset-lg-1 ts-home-sector-mood">
-          <div class="ts-section-mood-accent mb-3">{{ mood::mood_svg(kind="dialogue") }}</div>
-          <div class="ts-card">
-            <ul class="list-unstyled ts-value-list mb-4 small">
-              <li>ベッドサイド時間を削らずに共有される「いま」の可視化</li>
-              <li>伝票処理・突合作業への機械的正確さ</li>
-              <li>シフト運用現実に合わせた学習・訓練</li>
-              <li>介護者が補完される協働ロボット／センシング</li>
-            </ul>
-            <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">お問い合わせ</a>
-          </div>
-        </div>
-      </div>
-
-      <div id="farming-sector" class="row align-items-start mb-5 pb-5 border-bottom">
-        <div class="col-lg-7 mb-4 mb-lg-0">
-          <p class="ts-kicker mb-1">農業・一次産業</p>
-          <h3 class="h4 font-weight-bold mb-3">担い手不足と気候変動の両方へ、需要予測と作付計画を「賭け」にしないAI。</h3>
+          <p class="ts-kicker mb-1">ユーティリティ &amp; IoT</p>
+          <h3 class="h4 font-weight-bold mb-3">水道・ガス・電力メーターと数千台のデバイス台帳——クライアント向けダッシュボード。</h3>
           <div class="ts-prose">
-            <p>平均年齢の上昇や耕作放棄、猛暑・豪雨といったリスクの中で、現場の経験だけに頼り切ることは難しくなっています。一方で、需給や価格、圃場ごとの条件を踏まえた<strong>作付けや水管理のたたき台</strong>として、データとモデルを配置できるかを、再現可能な手順に落とし込みます。</p>
+            <p>超音波スマート水道メーター、電動バルブ、ガス調整点、三相電力計、MQTTデバイス認証——現場のPLCからクラウド時系列DB、オペレーター向けWeb UIまで一気通貫で設計します。<strong>Ningbo Water Meter</strong>、<strong>Shandong Rongxian Instrument</strong>、<strong>Ningbo Xingyuan Meter</strong>、<strong>Yuhuan Sierjia Valve</strong> など実績メーカーと組み合わせます。</p>
           </div>
         </div>
         <div class="col-lg-4 offset-lg-1 ts-home-sector-mood">
-          <div class="ts-section-mood-accent mb-3">{{ mood::mood_svg(kind="horizon") }}</div>
+          <figure class="ts-mood-panel ts-mood-panel--photo mb-3">
+            <img src="{{ get_url(path='img/portfolio/utility-device-geolocation.jpg') }}" alt="衛星地図上の井戸・メーター設置ポイント" loading="lazy" decoding="async" width="560" height="315"/>
+          </figure>
           <div class="ts-card">
             <ul class="list-unstyled ts-value-list mb-4 small">
-              <li>気象・生育・需給シグナルを、現場ワークフローに接続する</li>
-              <li>「予測の一点」ではなく前提・撤退基準まで含めた計画</li>
-              <li>センシングと機械は、反復・危険・夜間の監視から優先</li>
+              <li>数百台規模のデバイス台帳とリアルタイムKPI</li>
+              <li>衛星地図による設置ポイントの可視化</li>
+              <li>ガス調整点・スマートメーター・揚水HMIの統合画面</li>
             </ul>
-            <a href="{{ get_url(path='@/farming.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">農業について詳しく</a>
+            <a href="{{ get_url(path='@/utility-monitoring.md', lang=lang) }}" class="btn btn-sm btn-primary mr-2 mb-2">事例を見る</a>
+            <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary mb-2">お問い合わせ</a>
           </div>
         </div>
       </div>
@@ -142,16 +121,18 @@
       <div id="factories-sector" class="row align-items-start mb-5 pb-5 border-bottom">
         <div class="col-lg-7 mb-4 mb-lg-0">
           <p class="ts-kicker mb-1">製造・工場</p>
-          <h3 class="h4 font-weight-bold mb-3">IoT・センサー・海外拠点――漏れとロスをROIの言葉に載せる。</h3>
+          <h3 class="h4 font-weight-bold mb-3">IoT・センサー・海外拠点——漏れとロスをROIの言葉に載せる。</h3>
           <div class="ts-prose">
-            <p>ラインと設備のデータは取りこぼしがちで、海外協力工場が絡むほど「同じダッシュボード」が空振りしがちです。<strong>水道・エネルギー・材料ロス</strong>について、スマート水道メーターやリーク候補検知といった実績機器と組み合わせ、異常の定義から意思決定まで一気通貫で整理します。</p>
+            <p>ラインと設備のデータは取りこぼしがちで、海外協力工場が絡むほど「同じダッシュボード」が空振りしがちです。<strong>水道・エネルギー・材料ロス</strong>について、スマート水量計と異常検知を組み合わせ、異常の定義から意思決定まで一気通貫で整理します。</p>
           </div>
         </div>
         <div class="col-lg-4 offset-lg-1 ts-home-sector-mood">
-          <div class="ts-section-mood-accent mb-3">{{ mood::mood_svg(kind="foundation") }}</div>
+          <figure class="ts-mood-panel ts-mood-panel--photo mb-3">
+            <img src="{{ get_url(path='img/portfolio/factory-water-network.jpg') }}" alt="製油所の給水ネットワーク監視画面" loading="lazy" decoding="async" width="560" height="315"/>
+          </figure>
           <div class="ts-card">
             <ul class="list-unstyled ts-value-list mb-4 small">
-              <li>OEEの見せ方だけでなく、復旧時間・再発・待ち時間</li>
+              <li>復旧時間・再発・待ち時間——OEEの見せ方だけにしない</li>
               <li>異常閾値とエスカレーションの設計を先に決める</li>
               <li>設備／計装プロバイダー・工場長・本社の橋渡し</li>
             </ul>
@@ -160,60 +141,23 @@
         </div>
       </div>
 
-      <div id="real-estate-sector" class="row align-items-start">
+      <div id="cloud-ai-sector" class="row align-items-start">
         <div class="col-lg-7 mb-4 mb-lg-0">
-          <p class="ts-kicker mb-1">不動産・資産運用</p>
-          <h3 class="h4 font-weight-bold mb-3">投資とオペレーションの両輪——AIと人の境界を明示する。</h3>
+          <p class="ts-kicker mb-1">クラウド &amp; AI</p>
+          <h3 class="h4 font-weight-bold mb-3">マルチテナント基盤と、信号があるところだけの実用AI。</h3>
           <div class="ts-prose">
-            <p>空室・修繕・コンプライアンス・テナント対応まで同時に抱えるポートフォリオでは、ワークフロー自動化が効く一方で、<strong>裁量までアルゴリズムに預ける</strong>には慎重さがいります。「繰り返しは機械」「例外と責任は人」へのエスカレーションを設計から書き込みます。</p>
+            <p>デバイス認証、時系列ストア、API、クライアント別ダッシュボード——クラウド上でテナントを分け、各地域・各事業者に専用画面を届けます。AIは漏洩候補・異常使用量・設備故障パターンなど、<strong>ラベルと閾値が説明できる領域</strong>に限定し、エスカレーション経路を画面設計に組み込みます。</p>
           </div>
         </div>
         <div class="col-lg-4 offset-lg-1 ts-home-sector-mood">
-          <div class="ts-section-mood-accent mb-3">{{ mood::mood_svg(kind="detail") }}</div>
+          <div class="ts-section-mood-accent mb-3">{{ mood::mood_svg(kind="path") }}</div>
           <div class="ts-card">
             <ul class="list-unstyled ts-value-list mb-4 small">
-              <li>シナリオ分析とポートフォリオ監督の説明可能性</li>
-              <li>BM・ワークオーダー・保全の自動化と人への引き継ぎ</li>
-              <li>稟議・契約・リスクのサイロを減らす現実味ある連携</li>
+              <li>MQTTブローカー・時系列DB・マルチテナントUI</li>
+              <li>異常検知は説明可能性と人への引き継ぎを前提</li>
+              <li>計測→可視化→レポートの段階的ロールアウト</li>
             </ul>
-            <a href="{{ get_url(path='@/real-estate.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">不動産について詳しく</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="ts-section" id="model">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-8">
-          <p class="ts-kicker">買収・提携・支援</p>
-          <h2 class="ts-h2">規律あるテクノロジーが年単位で積み上がる事例にのみ、時間をかけます。</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-          <div class="ts-card h-100" data-aos="fade-up">
-            <h3>買収</h3>
-            <p>ブランド継続と雇用を守りつつ経営を更新したい所有者向け――資本と実行力を同時投入します。</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-          <div class="ts-card h-100" data-aos="fade-up" data-aos-delay="60">
-            <h3>提携</h3>
-            <p>経営が残るモデルでのガバナンス・テーマ設定・評価指標の統一。</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-          <div class="ts-card h-100" data-aos="fade-up" data-aos-delay="120">
-            <h3>伴走支援</h3>
-            <p>M&amp;A 準備まで至らなくても、意思が固いチームとの改善プログラムへ。</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="ts-card h-100" data-aos="fade-up" data-aos-delay="180">
-            <h3>選別</h3>
-            <p>リーダーのコミットと現場ファクトがある時だけ規模より深さへ。</p>
+            <a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">私たちについて</a>
           </div>
         </div>
       </div>
@@ -243,8 +187,8 @@
         </div>
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="ts-card" data-aos="fade-up" data-aos-delay="100">
-            <h3>噂話にならない AI</h3>
-            <p>観察可能な範囲と期限をセットに――現場ワークロードとの距離だけが空くロードマップは避ける。</p>
+            <h3>実用AI</h3>
+            <p>観察可能な範囲と期限をセットに——現場ワークロードから乖離したロードマップは避けます。</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
@@ -255,8 +199,8 @@
         </div>
         <div class="col-md-6 mb-4 mb-lg-0">
           <div class="ts-card" data-aos="fade-up" data-aos-delay="200">
-            <h3>働く人にも、利用者にも</h3>
-            <p>破綻しないオペレーションが、やさしさという差を生む空間になります。</p>
+            <h3>現場への敬意</h3>
+            <p>オペレーターと保全の暗黙知を優先——エンジニアリングが現場に従う関係を保ちます。</p>
           </div>
         </div>
       </div>
@@ -267,8 +211,8 @@
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-lg-8 mb-4 mb-lg-0">
-          <h2>承継・DX・介護創新・農業・製造・不動産まで、まず対話から。</h2>
-          <p class="mt-3 mb-0">事業会社、銀行・保険、自治体、アドバイザー・投資家、医療／介護・一次産業／食品、鉱工・設備、不動産ポートフォリオ、テクノロジー側の協創パートナー――接地した変革について話したい方を歓迎します。</p>
+          <h2>ユーティリティ・製造・クラウド／AIのご相談は、まず対話から。</h2>
+          <p class="mt-3 mb-0">水道・ガス・電力事業者、製造業、計装メーカー、インフラオペレーター、クラウド／AIパートナー——計測からダッシュボードまで、接地した変革について話したい方を歓迎します。</p>
         </div>
         <div class="col-lg-4 text-lg-right" data-aos="fade-left">
           <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-light btn-lg">お問い合わせ</a>
@@ -283,15 +227,14 @@
     <div class="container">
       <div class="row align-items-start align-items-lg-center justify-content-lg-between gx-lg-4 ts-hero-home-row">
         <div class="col-lg-7 hero-text-image text-center text-lg-left mb-4 mb-lg-0">
-              <p class="hero-eyebrow" data-aos="fade-right">Japan · Transformation · Ownership</p>
-              <h1 data-aos="fade-right">We engineer better businesses—combining AI, robotics, automation, and operational discipline.</h1>
+              <p class="hero-eyebrow" data-aos="fade-right">Utilities · IoT · Cloud · AI</p>
+              <h1 data-aos="fade-right">From meters to dashboards—water, gas, electric, and shop-floor data in one operating experience.</h1>
               <p class="mb-4 hero-lead" data-aos="fade-right" data-aos-delay="100">
-                TokyoScale is not a conventional software consultancy. We acquire, partner with, and help operate traditional Japanese companies—often under‑digitized and facing succession and staffing pressure—and build systems that make work safer, calmer, and more profitable over the long term.
+                TokyoScale connects meters, valves, and sensors to cloud platforms—MQTT fleets at thousands of endpoints, operator dashboards operators trust, and practical AI where the signal supports it. Hardware selection through manufacturing line visibility.
               </p>
               <div class="hero-actions" data-aos="fade-right" data-aos-delay="180">
                 <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-light mr-2 mb-2 mb-sm-0">Get in touch</a>
-                <a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}" class="btn btn-outline-white mr-2 mb-2 mb-sm-0">About us</a>
-                <a href="{{ get_url(path='@/how-it-works.md', lang=lang) }}" class="btn btn-outline-white mb-2 mb-sm-0">How we work together</a>
+                <a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}" class="btn btn-outline-white mb-2 mb-sm-0">About us</a>
               </div>
         </div>
         <div class="col-auto col-md-10 col-lg-4 col-xl-3 mx-auto ms-lg-auto text-center mt-3 mt-lg-0 px-3 px-lg-2 ts-hero-mood-col" data-aos="fade-left" data-aos-delay="60">
@@ -308,11 +251,11 @@
       <div class="row justify-content-lg-between align-items-start">
         <div class="col-lg-5 mb-4 mb-lg-0">
           <p class="ts-kicker">The context</p>
-          <h2 class="ts-h2">Japan’s incumbent businesses carry deep know‑how—they also face structural pressure.</h2>
+          <h2 class="ts-h2">Utility and plant telemetry keeps growing—but rarely connects.</h2>
         </div>
         <div class="col-lg-6 ts-prose">
-          <p>Worthy companies are squeezed by aging owners, labor scarcity, fragmented IT, and hard‑to‑change workflows. Digitization slides year to year—not because operators lack intent, but because change is risky, people are stretched, and “software projects” rarely fix what actually breaks in the operating model.</p>
-          <p class="mt-3"><strong>Elderly care </strong>is one of the most urgent domains: demand rises, regulation tightens margins, and frontline roles are physically and emotionally taxing. Technology should lighten that load—not add screen time for its own sake.</p>
+          <p>Water, gas, and electric meters; pumping stations; gas regulation points; factory flow and power—different vendors, different protocols. More dashboards do not help unless <strong>abnormal is defined</strong> and <strong>someone can act</strong>.</p>
+          <p class="mt-3">TokyoScale pairs proven metering hardware with cloud infrastructure—MQTT, time-series storage, operator UIs—as one product. AI lands only where signals are real and explanations hold up in operations.</p>
         </div>
       </div>
     </div>
@@ -323,88 +266,67 @@
       <div class="row mb-5">
         <div class="col-lg-10 mx-auto text-center">
           <p class="ts-kicker">What we bring</p>
-          <h2 class="ts-h2">Software, AI, robotics, and automation—with the mindset of operators who stay for the consequences.</h2>
-          <p class="ts-prose mx-auto mt-3">We map how work truly happens—handoffs, tacit knowledge, exception handling—and prioritize changes that endure: fewer repetitive tasks, clearer information, tighter safety, predictable throughput, and margins that compound.</p>
+          <h2 class="ts-h2">Metering hardware · cloud · AI—to dashboards operators use.</h2>
+          <p class="ts-prose mx-auto mt-3">Meter and valve selection, MQTT device registries, time-series data, SCADA-style views, scheduled reports, anomaly detection—we build one operational thread, not another screen farm.</p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
           <div class="ts-card" data-aos="fade-up">
-            <h3>Workflow &amp; systems</h3>
-            <p>Structured improvement of processes, tooling, integrations, data flow, and quality—chosen for practical impact rather than novelty.</p>
+            <h3>Utilities &amp; IoT</h3>
+            <p>Smart water meters, motorized valves, gas regulation points, pump stations—NB-IoT, LoRa, MQTT—from 7,000-device registries to single-site SCADA.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
           <div class="ts-card" data-aos="fade-up" data-aos-delay="80">
-            <h3>AI &amp; automation</h3>
-            <p>Responsible use of ML and automation where it reduces errors, rework, monitoring burden, or administrative overhead—paired with sensible governance.</p>
+            <h3>Cloud platform</h3>
+            <p>Device auth, time-series stores, APIs, multi-tenant client dashboards—the same numbers in the field and at HQ.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="ts-card" data-aos="fade-up" data-aos-delay="160">
-            <h3>Robotics &amp; sensing</h3>
-            <p>Hardware and software together when physical workloads, repetitive motion, or environmental monitoring materially affect safety and throughput.</p>
+            <h3>AI &amp; manufacturing</h3>
+            <p>Leak and anomaly patterns, abnormal usage, equipment faults—thresholds and escalation first; ML only where labels and signals are honest.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="ts-section ts-section-bordered" id="priority-sectors">
+  <section class="ts-section ts-section-bordered" id="focus-areas">
     <div class="container">
       <div class="row mb-5">
         <div class="col-lg-10">
           <p class="ts-kicker">Focus areas</p>
-          <h2 class="ts-h2">Elderly care, agriculture, manufacturing, and real estate—one disciplined operating lens.</h2>
-          <p class="ts-prose mb-2">Care facilities juggling shifts and regulators, labor‑scarce agriculture, fragmented shop‑floor telemetry, multitenant portfolios—none of these are solved by <strong>more dashboards for their own sake</strong>. We start by separating <strong>what should be measurable</strong> from <strong>what must stay human‑judged</strong>.</p>
-          <p class="small mb-0 text-muted">For elderly care, use <a href="{{ get_url(path='@/contact.md', lang=lang) }}">Contact</a>. Full briefs for agriculture, manufacturing, and real estate:
-            <a href="{{ get_url(path='@/farming.md', lang=lang) }}">Agriculture</a>,
+          <h2 class="ts-h2">Utilities · manufacturing · cloud &amp; AI—from measurement to decisions.</h2>
+          <p class="ts-prose mb-2">Device registries, pump-station SCADA, factory flow and power—none of these are solved by <strong>more dashboards for their own sake</strong>. Define <strong>what is abnormal</strong> and <strong>who acts</strong> first.</p>
+          <p class="small mb-0 text-muted">Full briefs:
+            <a href="{{ get_url(path='@/utility-monitoring.md', lang=lang) }}">Utility metering</a>,
             <a href="{{ get_url(path='@/factories.md', lang=lang) }}">Manufacturing</a>,
-            <a href="{{ get_url(path='@/real-estate.md', lang=lang) }}">Real estate</a>
-            —also in the header.</p>
+            <a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}">About us</a>.</p>
         </div>
       </div>
 
-      <div id="elderly-care" class="row align-items-start mb-5 pb-5 border-bottom">
+      <div id="utilities-sector" class="row align-items-start mb-5 pb-5 border-bottom">
         <div class="col-lg-7 mb-4 mb-lg-0">
-          <p class="ts-kicker mb-1">Elderly care</p>
-          <h3 class="h4 font-weight-bold mb-3">Health span, quality of life, and sustainable operations—not “more tech for desks.”</h3>
-          <div class="ts-care-accent ts-prose">
-            <p>Residents deserve dignity and attentive care when it matters—not just longevity on paper. Facilities need schedules, staffing ratios, medications, admissions, incidents, billing, reporting, families, regulators, contractors, and emergencies—often with limited margin.</p>
-            <p class="mt-3 mb-0">TokyoScale is interested in technology that raises <strong>health span</strong> and day‑to‑day wellbeing, strengthens <strong>safety culture</strong>, supports <strong>frontline staff</strong> with less chaos, and makes <strong>sustainable businesses</strong> possible where care stays human.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 offset-lg-1 ts-home-sector-mood">
-          <div class="ts-section-mood-accent mb-3">{{ mood::mood_svg(kind="dialogue") }}</div>
-          <div class="ts-card">
-            <ul class="list-unstyled ts-value-list mb-4 small">
-              <li>Operational visibility without burdening bedside time</li>
-              <li>Automation of repetitive documentation and reconciliation</li>
-              <li>Training and onboarding that fit real shift work</li>
-              <li>Human‑machine collaboration that complements caregivers</li>
-            </ul>
-            <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">Contact us</a>
-          </div>
-        </div>
-      </div>
-
-      <div id="farming-sector" class="row align-items-start mb-5 pb-5 border-bottom">
-        <div class="col-lg-7 mb-4 mb-lg-0">
-          <p class="ts-kicker mb-1">Agriculture &amp; primary industry</p>
-          <h3 class="h4 font-weight-bold mb-3">Labor shortage and climate risk—prediction without reckless single‑point bets.</h3>
+          <p class="ts-kicker mb-1">Utilities &amp; IoT</p>
+          <h3 class="h4 font-weight-bold mb-3">Water, gas, and electric meters—client dashboards at fleet scale.</h3>
           <div class="ts-prose">
-            <p>Aging growers, abandonment, volatility in weather and margins make intuition alone brittle. Signals on demand, field conditions, irrigation, and timing can underpin <strong>durable cropping plans</strong>—provided assumptions, thresholds, and stop rules are spelled out—not just headline forecasts.</p>
+            <p>Ultrasonic smart water meters, motorized valves, gas regulation points, three-phase metering, MQTT device auth—from field PLCs to cloud time-series and operator web UIs. We integrate proven hardware from <strong>Ningbo Water Meter</strong>, <strong>Shandong Rongxian Instrument</strong>, <strong>Ningbo Xingyuan Meter</strong>, and <strong>Yuhuan Sierjia Valve</strong>.</p>
           </div>
         </div>
         <div class="col-lg-4 offset-lg-1 ts-home-sector-mood">
-          <div class="ts-section-mood-accent mb-3">{{ mood::mood_svg(kind="horizon") }}</div>
+          <figure class="ts-mood-panel ts-mood-panel--photo mb-3">
+            <img src="{{ get_url(path='img/portfolio/utility-device-geolocation.jpg') }}" alt="Satellite map showing well and meter installation points" loading="lazy" decoding="async" width="560" height="315"/>
+          </figure>
           <div class="ts-card">
             <ul class="list-unstyled ts-value-list mb-4 small">
-              <li>Connect weather/soil/production signals to real field workflows</li>
-              <li>Plans that carry assumptions—not a single brittle prediction point</li>
-              <li>Automation prefers repetitive, risky, overnight monitoring first</li>
+              <li>Fleet-scale device registry with live KPIs</li>
+              <li>Satellite geolocation of field installation points</li>
+              <li>Integrated gas GRP, smart meters, and pump-station HMIs</li>
             </ul>
-            <a href="{{ get_url(path='@/farming.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">Read farming brief</a>
+            <a href="{{ get_url(path='@/utility-monitoring.md', lang=lang) }}" class="btn btn-sm btn-primary mr-2 mb-2">See example</a>
+            <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary mb-2">Contact us</a>
           </div>
         </div>
       </div>
@@ -414,76 +336,41 @@
           <p class="ts-kicker mb-1">Manufacturing</p>
           <h3 class="h4 font-weight-bold mb-3">IoT, sensing, offshore footprints—tie leaks and losses to ROI language.</h3>
           <div class="ts-prose">
-            <p>Shop‑floor data splinters quickly; exporting one dashboard seldom lands when subcontractors differ. Combining <strong>mature metering/leak anomaly patterns</strong>—smart water metering and anomaly analytics from credible providers—with disciplined definitions from <strong>“what is abnormal?”</strong> to <strong>who acts</strong> keeps programs honest.</p>
+            <p>Shop‑floor data splinters quickly; exporting one dashboard seldom lands when subcontractors differ. Combining <strong>smart metering and anomaly patterns</strong> with disciplined definitions from <strong>“what is abnormal?”</strong> to <strong>who acts</strong> keeps programs honest.</p>
           </div>
         </div>
         <div class="col-lg-4 offset-lg-1 ts-home-sector-mood">
-          <div class="ts-section-mood-accent mb-3">{{ mood::mood_svg(kind="foundation") }}</div>
+          <figure class="ts-mood-panel ts-mood-panel--photo mb-3">
+            <img src="{{ get_url(path='img/portfolio/factory-water-network.jpg') }}" alt="Refinery water network monitoring dashboard" loading="lazy" decoding="async" width="560" height="315"/>
+          </figure>
           <div class="ts-card">
             <ul class="list-unstyled ts-value-list mb-4 small">
               <li>Recovery time &amp; repeat incidents—not lipstick OEE slides alone</li>
               <li>Threshold design and escalation before sensor sprawl</li>
               <li>Bridging HQ, plants, instrumentation partners, OEMs</li>
             </ul>
-            <a href="{{ get_url(path='@/factories.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">Read factories brief</a>
+            <a href="{{ get_url(path='@/factories.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">Read manufacturing brief</a>
           </div>
         </div>
       </div>
 
-      <div id="real-estate-sector" class="row align-items-start">
+      <div id="cloud-ai-sector" class="row align-items-start">
         <div class="col-lg-7 mb-4 mb-lg-0">
-          <p class="ts-kicker mb-1">Real estate</p>
-          <h3 class="h4 font-weight-bold mb-3">Investment and operations—explicit boundaries between AI automation and accountable people.</h3>
+          <p class="ts-kicker mb-1">Cloud &amp; AI</p>
+          <h3 class="h4 font-weight-bold mb-3">Multi-tenant platforms and practical AI—only where signals exist.</h3>
           <div class="ts-prose">
-            <p>Vacancies, capex shocks, tenancy noise, BM workload—portfolio teams juggle simultaneous pressures. Useful automation distinguishes <strong>tedium automation</strong> from <strong>naked algorithmic escalation</strong>, keeping human‑in‑the‑loop paths legible.</p>
+            <p>Device authentication, time-series stores, APIs, per-client dashboards—tenants separated in the cloud, regional operators each get screens that match their workflow. AI targets leak candidates, abnormal usage, and equipment fault patterns—with <strong>explainable thresholds</strong> and escalation paths wired into the UI.</p>
           </div>
         </div>
         <div class="col-lg-4 offset-lg-1 ts-home-sector-mood">
-          <div class="ts-section-mood-accent mb-3">{{ mood::mood_svg(kind="detail") }}</div>
+          <div class="ts-section-mood-accent mb-3">{{ mood::mood_svg(kind="path") }}</div>
           <div class="ts-card">
             <ul class="list-unstyled ts-value-list mb-4 small">
-              <li>Scenario discipline and supervisory clarity for portfolios</li>
-              <li>Automate routinized WO/PM—with human escalation for exceptions</li>
-              <li>Reduce contract/approval silos without ceremonial ERP theatre</li>
+              <li>MQTT broker, time-series DB, multi-tenant operator UI</li>
+              <li>Anomaly detection with human handoff built in</li>
+              <li>Phased rollout: measure → visualize → report</li>
             </ul>
-            <a href="{{ get_url(path='@/real-estate.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">Read real estate brief</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="ts-section" id="model">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-8">
-          <p class="ts-kicker">Acquisition &amp; partnership</p>
-          <h2 class="ts-h2">We acquire, partner with, or support businesses where disciplined technology can compound over years.</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-          <div class="ts-card h-100" data-aos="fade-up">
-            <h3>Acquire</h3>
-            <p>For owners seeking continuity: we combine capital and capability to renew operations while respecting brand and legacy.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-          <div class="ts-card h-100" data-aos="fade-up" data-aos-delay="60">
-            <h3>Partner</h3>
-            <p>For leaders who remain involved: governance, delivery, incentives, and a shared roadmap for measured transformation.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-          <div class="ts-card h-100" data-aos="fade-up" data-aos-delay="120">
-            <h3>Support</h3>
-            <p>For teams not ready for a transaction but serious about upgrading systems: targeted programs with clear milestones.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="ts-card h-100" data-aos="fade-up" data-aos-delay="180">
-            <h3>Selectivity</h3>
-            <p>We take on engagements where fundamentals and leadership commitment make durable change plausible—preferring depth over volume.</p>
+            <a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">About us</a>
           </div>
         </div>
       </div>
@@ -514,7 +401,7 @@
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="ts-card" data-aos="fade-up" data-aos-delay="100">
             <h3>Practical AI</h3>
-            <p>Useful models, clear scopes, observable trade‑offs—we avoid inflated claims and speculative roadmaps disconnected from workloads.</p>
+            <p>Clear scope and observable trade-offs—we avoid roadmaps disconnected from operator workloads.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
@@ -525,8 +412,8 @@
         </div>
         <div class="col-md-6 mb-4 mb-lg-0">
           <div class="ts-card" data-aos="fade-up" data-aos-delay="200">
-            <h3>Better work, better care</h3>
-            <p>When staff spend less energy on breakage, they spend more on judgement, mentorship, kindness, and the small things that differentiate care.</p>
+            <h3>Respect for operators</h3>
+            <p>Seasoned plant and field staff carry scarce know-how—engineering should amplify them, not override them.</p>
           </div>
         </div>
       </div>
@@ -537,8 +424,8 @@
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-lg-8 mb-4 mb-lg-0">
-          <h2>Talk to us about succession, modernization, elderly care, farms, factories, or real estate portfolios.</h2>
-          <p class="mt-3 mb-0">Owners, banks, insurers, municipalities, advisers, investors, care providers, agrifood operators, industrial plants, portfolio teams, and technologists aligned with grounded transformation—we would like to hear from you.</p>
+          <h2>Talk to us about utility metering, manufacturing IoT, cloud platforms, and practical AI.</h2>
+          <p class="mt-3 mb-0">Water and gas utilities, manufacturers, instrumentation vendors, infrastructure operators, and cloud/AI partners—we would like to hear from you.</p>
         </div>
         <div class="col-lg-4 text-lg-right" data-aos="fade-left">
           <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-light btn-lg">Contact TokyoScale</a>

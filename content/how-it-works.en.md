@@ -1,7 +1,8 @@
 +++
+draft = true
 title = "How we work together"
 template = "works.html"
-description = "Assessment, phased execution, adoption support, and long‑term stewardship—designed around how Japanese organizations actually operate."
+description = "Assessment, phased rollout, adoption support, and stewardship—for utility metering, IoT, manufacturing, cloud, and practical AI."
 
 [extra]
 mood = "path"
@@ -29,7 +30,7 @@ Examples include integrations, robotics or sensing pilots, pragmatic ML where si
 
 We embed with your teams—not only through a distant service-desk queue. Training runs, escalation checks, and documentation kept lean enough that people actually use it.
 
-In elderly care we pace deliberately: fewer experiments in parallel, calmer nights, clearer alerts—we respect roster reality and morale.
+On utility and plant floors we pace deliberately: fewer parallel experiments, night-shift-friendly alerts, rollout aligned to operator shifts.
 
 ## 4. Operate—and improve
 

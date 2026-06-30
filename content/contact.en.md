@@ -1,6 +1,6 @@
 +++
 title = "Contact"
-description = "Reach TokyoScale regarding succession planning, modernization, elderly care, partnership, or feasibility—whether you are moving soon or exploring options calmly."
+description = "Utility metering, IoT, manufacturing, cloud platforms, and dashboards—whether you are moving soon or exploring options."
 template = "contact.html"
 
 [extra]

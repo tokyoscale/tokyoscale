@@ -6,7 +6,7 @@
 {% else %}{{ page.title }} | TokyoScale
 {% endif %}
 {% endblock title %}
-{% block meta_description %}{{ page.description | default(value="Contact TokyoScale about succession planning, modernization, elderly care, or partnerships.") }}{% endblock meta_description %}
+{% block meta_description %}{{ page.description | default(value="Contact TokyoScale about utility metering, IoT, manufacturing, cloud, and AI dashboards.") }}{% endblock meta_description %}
 
 {% block content %}
 <section class="hero-section inner-page hero-with-mood">
@@ -42,7 +42,18 @@
     <div class="container">
       {# Same Pageclip form URL + field names on /contact and /en/contact; only headings/labels translate. Minimal fields per Pageclip basics: https://pageclip.co/docs #}
       <div class="row justify-content-center">
-        <div class="col-lg-7" data-aos="fade-up">
+        <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-up">
+          <h2 class="h4 mb-3">{% if lang == 'ja' %}連絡先{% else %}Contact details{% endif %}</h2>
+          <address class="ts-contact-address text-muted mb-4">
+            <span class="d-block text-body mb-1">{% if lang == 'ja' %}所在地{% else %}Address{% endif %}</span>
+            {% if lang == 'ja' %}{{ config.extra.address_ja }}{% else %}{{ config.extra.address_en }}{% endif %}
+          </address>
+          <p class="ts-contact-address text-muted mb-0">
+            <span class="d-block text-body mb-1">{% if lang == 'ja' %}電話{% else %}Phone{% endif %}</span>
+            <a href="tel:{{ config.extra.phone_tel }}" class="ts-contact-phone">{{ config.extra.phone }}</a>
+          </p>
+        </div>
+        <div class="col-lg-7" data-aos="fade-up" data-aos-delay="60">
           <h2 class="h4 mb-3">{% if lang == 'ja' %}メッセージ{% else %}Message{% endif %}</h2>
           <p class="text-muted small mb-4">
             {% if lang == 'ja' %}ご用件・状況を簡潔にご記入ください。

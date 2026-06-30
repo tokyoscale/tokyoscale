@@ -1,4 +1,5 @@
 +++
+draft = true
 title = "Agriculture & primary industry"
 template = "works.html"
 description = "Japan’s farming workforce and climate pressures—AI and data where predictions, planting, and field operations stay grounded in what teams can actually run."

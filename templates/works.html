@@ -2,7 +2,7 @@
 {% import "macros/mood.html" as mood %}
 
 {% block title %}{{ page.title }} | TokyoScale{% endblock title %}
-{% block meta_description %}{{ page.description | default(value="TokyoScale | transformation partner for Japanese businesses and elderly care.") }}{% endblock meta_description %}
+{% block meta_description %}{{ page.description | default(value="TokyoScale | utility metering, IoT, manufacturing, cloud, and AI dashboards.") }}{% endblock meta_description %}
 
 {% block content %}
 <section class="hero-section inner-page hero-with-mood">
@@ -38,6 +38,14 @@
         <div class="row justify-content-center">
             <div class="col-lg-9 ts-home-prose px-3 px-lg-4">
               {{ page.content | safe }}
+              {% if page.translations and page.translations | length > 0 %}
+              <p class="small text-muted border-top pt-3 mt-4 mb-0">
+                {% if lang == 'ja' %}別言語:{% else %}Other language:{% endif %}
+                {% for t in page.translations %}
+                <a href="{{ t.permalink | safe }}" hreflang="{{ t.lang }}">{% if t.lang == 'ja' %}日本語{% else %}English{% endif %}</a>{% if not loop.last %} · {% endif %}
+                {% endfor %}
+              </p>
+              {% endif %}
             </div>
         </div>
         </div>

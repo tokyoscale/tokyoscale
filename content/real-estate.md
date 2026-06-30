@@ -1,4 +1,5 @@
 +++
+draft = true
 title = "不動産・資産運用"
 template = "works.html"
 description = "投資判断と日常運営の両方で、自動化・AIとヒューマン・イン・ザ・ループを両立させる——テナント、BM、ポートフォリオの現実へ。"

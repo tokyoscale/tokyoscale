@@ -25,3 +25,8 @@ taxonomies = [
 theme = "github-light"
 
 [extra]
+# TokyoScale office (Edogawa-ku, Tokyo)
+address_ja = "〒132-0025 東京都江戸川区松江5-21-2 802"
+address_en = "802, 5-21-2 Matsue, Edogawa-ku, Tokyo 132-0025, Japan"
+phone = "080-1320-6699"
+phone_tel = "+818013206699"

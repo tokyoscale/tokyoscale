@@ -1,4 +1,5 @@
 +++
+draft = true
 title = "農業・一次産業"
 template = "works.html"
 description = "担い手不足と気候変動に向き合う日本の農業——需要予測・作付け・現場オペレーションへ、測定可能なAIとデータ基盤を。"

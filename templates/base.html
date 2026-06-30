@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="{%- block meta_description %}東京スケイル — AI、ロボティクス、自動化と事業変革{% endblock meta_description -%}">
+        <meta name="description" content="{%- block meta_description %}東京スケイル — ユーティリティ・IoT・製造向けの計測、クラウド、AI、クライアントダッシュボード{% endblock meta_description -%}">
         <title>{%- block title -%}{% endblock title -%}</title>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap">
@@ -66,11 +66,8 @@
                     <ul class="site-menu main-menu js-clone-nav mb-0 d-flex flex-wrap align-items-center justify-content-end">
                     <li><a href="{{ get_url(path='@/_index.md', lang=lang) }}" class="nav-link">{% if lang == 'ja' %}ホーム{% else %}Home{% endif %}</a></li>
                     <li><a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}" class="nav-link">{% if lang == 'ja' %}私たちについて{% else %}About{% endif %}</a></li>
-                    <li><a href="{{ get_url(path='@/how-it-works.md', lang=lang) }}" class="nav-link">{% if lang == 'ja' %}進め方{% else %}Approach{% endif %}</a></li>
-                    <li><a href="{{ get_url(path='@/_index.md', lang=lang) }}#elderly-care" class="nav-link">{% if lang == 'ja' %}介護・高齢者{% else %}Elderly care{% endif %}</a></li>
-                    <li><a href="{{ get_url(path='@/farming.md', lang=lang) }}" class="nav-link text-nowrap">{% if lang == 'ja' %}農業{% else %}Agriculture{% endif %}</a></li>
-                    <li><a href="{{ get_url(path='@/factories.md', lang=lang) }}" class="nav-link text-nowrap">{% if lang == 'ja' %}製造{% else %}Factories{% endif %}</a></li>
-                    <li><a href="{{ get_url(path='@/real-estate.md', lang=lang) }}" class="nav-link text-nowrap">{% if lang == 'ja' %}不動産{% else %}Real estate{% endif %}</a></li>
+                    <li><a href="{{ get_url(path='@/utility-monitoring.md', lang=lang) }}" class="nav-link text-nowrap">{% if lang == 'ja' %}ユーティリティ{% else %}Utilities{% endif %}</a></li>
+                    <li><a href="{{ get_url(path='@/factories.md', lang=lang) }}" class="nav-link text-nowrap">{% if lang == 'ja' %}製造{% else %}Manufacturing{% endif %}</a></li>
                     <li><a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="nav-link">{% if lang == 'ja' %}お問い合わせ{% else %}Contact{% endif %}</a></li>
                     </ul>
                 </nav>
@@ -93,11 +90,19 @@
                       {{- tsbrand::logo_mark()-}}
                       <span class="ts-footer-brand mb-0 pl-2">TokyoScale</span>
                     </a>
-                    <p class="small ts-footer-lead mb-0">{% if lang == 'ja' %}
-                          産業インフラの次世代へ——エンジニアリング・提携関係・長い時間軸での変革に責任を持つ運営者として。
+                    <p class="small ts-footer-lead mb-2">{% if lang == 'ja' %}
+                          水道・ガス・電力の計測から製造現場のIoTまで——クラウドとAIで、現場が使えるダッシュボードを届けます。
                         {% else %}
-                          Technology operator for Japan’s next generation of businesses—engineering, partnerships, and long‑horizon transformation grounded in operational reality.
+                          From water, gas, and electric metering to shop-floor IoT—cloud platforms and practical AI that operators actually use.
                         {% endif %}</p>
+                    <p class="small ts-footer-address mb-2">
+                      <span class="d-block text-muted mb-1">{% if lang == 'ja' %}所在地{% else %}Address{% endif %}</span>
+                      {% if lang == 'ja' %}{{ config.extra.address_ja }}{% else %}{{ config.extra.address_en }}{% endif %}
+                    </p>
+                    <p class="small ts-footer-address mb-0">
+                      <span class="d-block text-muted mb-1">{% if lang == 'ja' %}電話{% else %}Phone{% endif %}</span>
+                      <a href="tel:{{ config.extra.phone_tel }}" class="ts-footer-phone">{{ config.extra.phone }}</a>
+                    </p>
                       </div>
                   <div class="col-12 col-md-5 mt-2 mt-md-0">
                     <nav aria-label="{% if lang == 'ja' %}フッターナビ{% else %}Footer navigation{% endif %}">
@@ -105,11 +110,8 @@
                       <ul class="ts-footer-links list-unstyled">
                           <li><a href="{{ get_url(path='@/_index.md', lang=lang) }}">{% if lang == 'ja' %}ホーム{% else %}Home{% endif %}</a></li>
                           <li><a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}">{% if lang == 'ja' %}私たちについて{% else %}About{% endif %}</a></li>
-                          <li><a href="{{ get_url(path='@/how-it-works.md', lang=lang) }}">{% if lang == 'ja' %}進め方{% else %}Approach{% endif %}</a></li>
-                          <li><a href="{{ get_url(path='@/_index.md', lang=lang) }}#elderly-care">{% if lang == 'ja' %}介護{% else %}Elderly care{% endif %}</a></li>
-                          <li><a href="{{ get_url(path='@/farming.md', lang=lang) }}">{% if lang == 'ja' %}農業{% else %}Agriculture{% endif %}</a></li>
+                          <li><a href="{{ get_url(path='@/utility-monitoring.md', lang=lang) }}">{% if lang == 'ja' %}ユーティリティ{% else %}Utilities{% endif %}</a></li>
                           <li><a href="{{ get_url(path='@/factories.md', lang=lang) }}">{% if lang == 'ja' %}製造{% else %}Manufacturing{% endif %}</a></li>
-                          <li><a href="{{ get_url(path='@/real-estate.md', lang=lang) }}">{% if lang == 'ja' %}不動産{% else %}Real estate{% endif %}</a></li>
                           <li><a href="{{ get_url(path='@/contact.md', lang=lang) }}">{% if lang == 'ja' %}お問い合わせ{% else %}Contact{% endif %}</a></li>
                       </ul>
                     </nav>

@@ -1,4 +1,5 @@
 +++
+draft = true
 title = "Real estate & asset operations"
 template = "works.html"
 description = "Investment and day‑to‑day operations—balancing automation, AI, and human‑in‑the‑loop for tenants, building management, and portfolio reality."

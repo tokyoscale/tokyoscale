@@ -8,16 +8,31 @@
 </svg>
 {% endmacro %}
 
-{# Flag emoji rendered as emoji; fall back to monospace letters on restricted platforms. See CSS .ts-flag-emoji #}
+{# Language switch: stay on the translated page when available. #}
 {% macro lang_switch_icons() %}
+{% set_global ja_href = get_url(path='@/_index.md', lang='ja') %}
+{% set_global en_href = get_url(path='@/_index.md', lang='en') %}
+{% if page %}
+  {% if lang == 'ja' %}
+    {% set_global ja_href = page.permalink %}
+    {% for t in page.translations %}
+      {% if t.lang == 'en' %}{% set_global en_href = t.permalink %}{% endif %}
+    {% endfor %}
+  {% else %}
+    {% set_global en_href = page.permalink %}
+    {% for t in page.translations %}
+      {% if t.lang == 'ja' %}{% set_global ja_href = t.permalink %}{% endif %}
+    {% endfor %}
+  {% endif %}
+{% endif %}
 <div class="ts-lang-switch-icons" {% if lang == 'ja' %}aria-label="言語選択"{% else %}aria-label="Language"{% endif %}>
-  <a href="{{ get_url(path='@/_index.md', lang='ja') }}"
+  <a href="{{ ja_href | safe }}"
      lang="ja" hreflang="ja"
      class="ts-lang-btn {% if lang == 'ja' %}is-active{% endif %}"
      {% if lang == 'ja' %}aria-current="true"{% endif %}
      aria-label="{% if lang == 'ja' %}日本語（現在）{% else %}Japanese{% endif %}"
      title="日本語"><span class="ts-flag-emoji" role="presentation">🇯🇵</span></a>
-  <a href="{{ get_url(path='@/_index.md', lang='en') }}"
+  <a href="{{ en_href | safe }}"
      lang="en-US" hreflang="en"
      class="ts-lang-btn {% if lang == 'en' %}is-active{% endif %}"
      {% if lang == 'en' %}aria-current="true"{% endif %}
