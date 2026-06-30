@@ -1,0 +1,433 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="水道・ガス・電力メーターと製造現場のIoTを、クラウドとAIでつなぎ、オペレーター向けダッシュボードまで一気通貫で設計・運用するパートナー。">
+        <title>東京スケイル | ユーティリティ・IoT・製造の計測とダッシュボード</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap">
+        <link href="https://www.tokyoscale.com/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://www.tokyoscale.com/vendor/icofont/icofont.min.css" rel="stylesheet">
+        <link href="https://www.tokyoscale.com/vendor/aos/aos.css" rel="stylesheet">
+        <link href="https://www.tokyoscale.com/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+        <link href="https://www.tokyoscale.com/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="https://www.tokyoscale.com/css/style.css?v=20260630" rel="stylesheet" type="text/css">
+        <link href="https://www.tokyoscale.com/css/tokyoscale.css?v=20260630" rel="stylesheet" type="text/css">
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ0LMRWEF6"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-WJ0LMRWEF6');
+        </script>
+        <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    </head>
+    <body>
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icofont-close js-menu-toggle"></span>
+            </div>
+            </div>
+            <div class="site-mobile-menu-body">
+            <div class="ts-mobile-lang px-4 pt-3 pb-4 border-bottom d-lg-none">
+              
+
+
+
+<div class="ts-lang-switch-icons" aria-label="言語選択">
+  <a href="https://www.tokyoscale.com/"
+     lang="ja" hreflang="ja"
+     class="ts-lang-btn is-active"
+     aria-current="true"
+     aria-label="日本語（現在）"
+     title="日本語"><span class="ts-flag-emoji" role="presentation">🇯🇵</span></a>
+  <a href="https://www.tokyoscale.com/en/"
+     lang="en-US" hreflang="en"
+     class="ts-lang-btn "
+     
+     aria-label="English"
+     title="English"><span class="ts-flag-emoji" role="presentation">🇬🇧</span></a>
+</div>
+
+            </div>
+            </div>
+        </div>
+
+        <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+            <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-6 col-lg-4">
+                <div class="mb-0 site-logo">
+                  <a href="https://www.tokyoscale.com/" class="site-logo-brand d-inline-flex align-items-center text-body">
+<svg class="site-logo-mark " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" role="presentation" aria-hidden="true" focusable="false" width="36" height="36">
+  <rect x="6" y="22" width="7" height="10" rx="1.75" fill="#274685"/>
+  <rect x="15.5" y="17" width="7" height="15" rx="1.75" fill="#2c5e97"/>
+  <rect x="25" y="10" width="7" height="22" rx="1.75" fill="#1391a5"/>
+  <path d="M5 34h29v2H5z" fill="#1a3766" opacity=".22"/>
+</svg>
+<span class="h4 mb-0 pl-2 site-logo-text font-weight-bold">TokyoScale</span>
+                  </a>
+                </div>
+                </div>
+
+                <div class="col-6 d-flex d-lg-none justify-content-end align-items-center py-3">
+                <div class="mr-2">
+
+
+
+<div class="ts-lang-switch-icons" aria-label="言語選択">
+  <a href="https://www.tokyoscale.com/"
+     lang="ja" hreflang="ja"
+     class="ts-lang-btn is-active"
+     aria-current="true"
+     aria-label="日本語（現在）"
+     title="日本語"><span class="ts-flag-emoji" role="presentation">🇯🇵</span></a>
+  <a href="https://www.tokyoscale.com/en/"
+     lang="en-US" hreflang="en"
+     class="ts-lang-btn "
+     
+     aria-label="English"
+     title="English"><span class="ts-flag-emoji" role="presentation">🇬🇧</span></a>
+</div>
+</div>
+                <a href="#" class="burger site-menu-toggle js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+                    <span></span>
+                </a>
+                </div>
+
+                <div class="col-lg-8 d-none d-lg-flex align-items-center justify-content-end flex-wrap ts-header-end">
+                <nav class="site-navigation" role="navigation" aria-label="主要">
+                    <ul class="site-menu main-menu js-clone-nav mb-0 d-flex flex-wrap align-items-center justify-content-end">
+                    <li><a href="https://www.tokyoscale.com/" class="nav-link">ホーム</a></li>
+                    <li><a href="https://www.tokyoscale.com/about-tokyoscale/" class="nav-link">私たちについて</a></li>
+                    <li><a href="https://www.tokyoscale.com/utility-monitoring/" class="nav-link text-nowrap">ユーティリティ</a></li>
+                    <li><a href="https://www.tokyoscale.com/factories/" class="nav-link text-nowrap">製造</a></li>
+                    <li><a href="https://www.tokyoscale.com/contact/" class="nav-link">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <div class="ts-lang-wrap ml-3 pl-3">
+
+
+
+<div class="ts-lang-switch-icons" aria-label="言語選択">
+  <a href="https://www.tokyoscale.com/"
+     lang="ja" hreflang="ja"
+     class="ts-lang-btn is-active"
+     aria-current="true"
+     aria-label="日本語（現在）"
+     title="日本語"><span class="ts-flag-emoji" role="presentation">🇯🇵</span></a>
+  <a href="https://www.tokyoscale.com/en/"
+     lang="en-US" hreflang="en"
+     class="ts-lang-btn "
+     
+     aria-label="English"
+     title="English"><span class="ts-flag-emoji" role="presentation">🇬🇧</span></a>
+</div>
+</div>
+                </div>
+
+            </div>
+            </div>
+        </header>
+
+            <main class="ts-main">
+                    
+
+
+
+  <section class="hero-section hero-tokyoscale hero-with-mood" id="hero">
+    <div class="container">
+      <div class="row align-items-start align-items-lg-center justify-content-lg-between gx-lg-4 ts-hero-home-row">
+        <div class="col-lg-7 hero-text-image text-center text-lg-left mb-4 mb-lg-0">
+              <p class="hero-eyebrow" data-aos="fade-right">ユーティリティ · IoT · クラウド · AI</p>
+              <h1 data-aos="fade-right">計測からダッシュボードまで——水道・ガス・電力と製造現場を、一つの運用体験に。</h1>
+              <p class="mb-4 hero-lead" data-aos="fade-right" data-aos-delay="100">
+                東京スケイルはメーター・バルブ・センサーとクラウドをつなぎ、MQTTで数千台を束ね、現場オペレーターが信頼できる画面とレポートを届けます。ハード選定からAIによる異常検知、製造ラインの可視化まで。
+              </p>
+              <div class="hero-actions" data-aos="fade-right" data-aos-delay="180">
+                <a href="https://www.tokyoscale.com/contact/" class="btn btn-light mr-2 mb-2 mb-sm-0">お問い合わせ</a>
+                <a href="https://www.tokyoscale.com/about-tokyoscale/" class="btn btn-outline-white mb-2 mb-sm-0">会社概要</a>
+              </div>
+        </div>
+        <div class="col-auto col-md-10 col-lg-4 col-xl-3 mx-auto ms-lg-auto text-center mt-3 mt-lg-0 px-3 px-lg-2 ts-hero-mood-col" data-aos="fade-left" data-aos-delay="60">
+              
+<figure class="ts-mood-panel ts-mood-panel--horizon" aria-hidden="true">
+
+  
+  <svg viewBox="0 0 280 220" overflow="visible" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
+    <rect width="280" height="220" fill="#121923"/>
+    <rect width="280" height="118" fill="#1391a5" opacity="0.14"/>
+    <path fill="rgba(255,255,255,.04)" d="M0 180 L60 150 L140 165 L220 138 L280 155 L280 220 L0 220 Z"/>
+    <path fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1" d="M0 148 L72 132 L148 146 L226 118 L280 128"/>
+    <path fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1" d="M0 172 L96 154 L174 174 L268 154"/>
+    <circle cx="220" cy="56" r="28" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.2"/>
+  </svg>
+
+</figure>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section ts-section-muted" id="context">
+    <div class="container">
+      <div class="row justify-content-lg-between align-items-start">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <p class="ts-kicker">背景</p>
+          <h2 class="ts-h2">ユーティリティと製造現場は、計測データがバラバラなまま増え続けています。</h2>
+        </div>
+        <div class="col-lg-6 ts-prose">
+          <p>水道・ガス・電力メーター、揚水ポンプ、ガス調整点、工場の流量・電力——ベンダーもプロトコルも違う。ダッシュボードを足しても、<strong>異常の定義</strong>と<strong>誰が動くか</strong>が揃わなければ現場は使いません。</p>
+          <p class="mt-3">東京スケイルは、実績のある計装メーカーとクラウド基盤を組み合わせ、MQTT・時系列DB・オペレーターUIまでを一つの製品として設計します。AIは、信号があるところにだけ、説明可能な形で載せます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section ts-section-bordered">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-10 mx-auto text-center">
+          <p class="ts-kicker">提供するもの</p>
+          <h2 class="ts-h2">計装ハードウェア · クラウド · AI — 現場が使うダッシュボードまで。</h2>
+          <p class="ts-prose mx-auto mt-3">メーターとバルブの選定、MQTTデバイス台帳、時系列データ、SCADA風の監視画面、定期レポート、異常検知——「画面を増やす」のではなく、運用の一本線をつくります。</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="ts-card" data-aos="fade-up">
+            <h3>ユーティリティ &amp; IoT</h3>
+            <p>スマート水道メーター、電動バルブ、ガス調整点、揚水ポンプ——NB-IoT・LoRa・MQTTで束ね、7,000台規模の台帳管理から単一拠点のSCADAまで。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="80">
+            <h3>クラウド基盤</h3>
+            <p>デバイス認証、時系列ストア、API、マルチテナントのクライアントダッシュボード。現場と本部で同じ数字が見える設計。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="160">
+            <h3>AI &amp; 製造</h3>
+            <p>漏洩・異常使用量・設備故障のパターン検知。製造ラインの流量・電力・振動——閾値とエスカレーションを先に決め、信号がある領域にだけMLを載せます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section ts-section-bordered" id="focus-areas">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-10">
+          <p class="ts-kicker">重点領域</p>
+          <h2 class="ts-h2">ユーティリティ · 製造 · クラウド／AI — 計測から意思決定まで。</h2>
+          <p class="ts-prose mb-2">メーター台帳、揚水ポンプのSCADA、工場の流量・電力——いずれも<strong>ダッシュボードを増やすこと</strong>が目的ではなく、<strong>何を異常とみなし、誰が動くか</strong>を先に決めることが先です。</p>
+          <p class="small mb-0 text-muted">詳細ページ：<a href="https://www.tokyoscale.com/utility-monitoring/">ユーティリティ計測</a> · <a href="https://www.tokyoscale.com/factories/">製造・工場</a> · <a href="https://www.tokyoscale.com/about-tokyoscale/">私たちについて</a></p>
+        </div>
+      </div>
+
+      <div id="utilities-sector" class="row align-items-start mb-5 pb-5 border-bottom">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <p class="ts-kicker mb-1">ユーティリティ &amp; IoT</p>
+          <h3 class="h4 font-weight-bold mb-3">水道・ガス・電力メーターと数千台のデバイス台帳——クライアント向けダッシュボード。</h3>
+          <div class="ts-prose">
+            <p>超音波スマート水道メーター、電動バルブ、ガス調整点、三相電力計、MQTTデバイス認証——現場のPLCからクラウド時系列DB、オペレーター向けWeb UIまで一気通貫で設計します。<strong>Ningbo Water Meter</strong>、<strong>Shandong Rongxian Instrument</strong>、<strong>Ningbo Xingyuan Meter</strong>、<strong>Yuhuan Sierjia Valve</strong> など実績メーカーと組み合わせます。</p>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 ts-home-sector-mood">
+          <figure class="ts-mood-panel ts-mood-panel--photo mb-3">
+            <img src="https://www.tokyoscale.com/img/portfolio/utility-device-geolocation.jpg" alt="衛星地図上の井戸・メーター設置ポイント" loading="lazy" decoding="async" width="560" height="315"/>
+          </figure>
+          <div class="ts-card">
+            <ul class="list-unstyled ts-value-list mb-4 small">
+              <li>数百台規模のデバイス台帳とリアルタイムKPI</li>
+              <li>衛星地図による設置ポイントの可視化</li>
+              <li>ガス調整点・スマートメーター・揚水HMIの統合画面</li>
+            </ul>
+            <a href="https://www.tokyoscale.com/utility-monitoring/" class="btn btn-sm btn-primary mr-2 mb-2">事例を見る</a>
+            <a href="https://www.tokyoscale.com/contact/" class="btn btn-sm btn-outline-secondary mb-2">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="factories-sector" class="row align-items-start mb-5 pb-5 border-bottom">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <p class="ts-kicker mb-1">製造・工場</p>
+          <h3 class="h4 font-weight-bold mb-3">IoT・センサー・海外拠点——漏れとロスをROIの言葉に載せる。</h3>
+          <div class="ts-prose">
+            <p>ラインと設備のデータは取りこぼしがちで、海外協力工場が絡むほど「同じダッシュボード」が空振りしがちです。<strong>水道・エネルギー・材料ロス</strong>について、スマート水量計と異常検知を組み合わせ、異常の定義から意思決定まで一気通貫で整理します。</p>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 ts-home-sector-mood">
+          <figure class="ts-mood-panel ts-mood-panel--photo mb-3">
+            <img src="https://www.tokyoscale.com/img/portfolio/factory-water-network.jpg" alt="製油所の給水ネットワーク監視画面" loading="lazy" decoding="async" width="560" height="315"/>
+          </figure>
+          <div class="ts-card">
+            <ul class="list-unstyled ts-value-list mb-4 small">
+              <li>復旧時間・再発・待ち時間——OEEの見せ方だけにしない</li>
+              <li>異常閾値とエスカレーションの設計を先に決める</li>
+              <li>設備／計装プロバイダー・工場長・本社の橋渡し</li>
+            </ul>
+            <a href="https://www.tokyoscale.com/factories/" class="btn btn-sm btn-outline-secondary">製造について詳しく</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="cloud-ai-sector" class="row align-items-start">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <p class="ts-kicker mb-1">クラウド &amp; AI</p>
+          <h3 class="h4 font-weight-bold mb-3">マルチテナント基盤と、信号があるところだけの実用AI。</h3>
+          <div class="ts-prose">
+            <p>デバイス認証、時系列ストア、API、クライアント別ダッシュボード——クラウド上でテナントを分け、各地域・各事業者に専用画面を届けます。AIは漏洩候補・異常使用量・設備故障パターンなど、<strong>ラベルと閾値が説明できる領域</strong>に限定し、エスカレーション経路を画面設計に組み込みます。</p>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 ts-home-sector-mood">
+          <div class="ts-section-mood-accent mb-3">
+<figure class="ts-mood-panel ts-mood-panel--path" aria-hidden="true">
+
+  <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
+    <rect width="280" height="220" fill="#10151c"/>
+    <path fill="none" stroke="rgba(255,255,255,.42)" stroke-width="1.2" stroke-dasharray="6 10"
+          d="M32 170 C 70 148, 100 148, 128 132 S 178 108, 210 92 S 250 76, 252 54"/>
+    <circle cx="34" cy="172" r="5" fill="rgba(19,145,165,.85)"/>
+    <circle cx="250" cy="54" r="5" stroke="rgba(255,255,255,.7)" stroke-width="1.2" fill="#10151c"/>
+    <circle cx="128" cy="132" r="4" fill="rgba(255,255,255,.2)"/>
+  </svg>
+
+</figure>
+</div>
+          <div class="ts-card">
+            <ul class="list-unstyled ts-value-list mb-4 small">
+              <li>MQTTブローカー・時系列DB・マルチテナントUI</li>
+              <li>異常検知は説明可能性と人への引き継ぎを前提</li>
+              <li>計測→可視化→レポートの段階的ロールアウト</li>
+            </ul>
+            <a href="https://www.tokyoscale.com/about-tokyoscale/" class="btn btn-sm btn-outline-secondary">私たちについて</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section ts-section-muted ts-section-bordered" id="values">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-10">
+          <p class="ts-kicker">価値観</p>
+          <h2 class="ts-h2">成果と現場への敬意を両立させる規範。</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="ts-card" data-aos="fade-up">
+            <h3>ヒューマン中心の自動化</h3>
+            <p>判断・気遣いから切り離すのではなく、負わせすぎた手続摩擦をなくす順に進めます。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="50">
+            <h3>熟練への敬意</h3>
+            <p>歴史的年輪だけでは埋められない洞察を優先――エンジニアリングが従わない逆転関係へはしない。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>実用AI</h3>
+            <p>観察可能な範囲と期限をセットに——現場ワークロードから乖離したロードマップは避けます。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="150">
+            <h3>長期の所有者意識</h3>
+            <p>導入の瞬間だけでなく、運用フェーズにもリソース計画があります。</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4 mb-lg-0">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>現場への敬意</h3>
+            <p>オペレーターと保全の暗黙知を優先——エンジニアリングが現場に従う関係を保ちます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ts-section ts-section-cta ts-cta" id="cta">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <h2>ユーティリティ・製造・クラウド／AIのご相談は、まず対話から。</h2>
+          <p class="mt-3 mb-0">水道・ガス・電力事業者、製造業、計装メーカー、インフラオペレーター、クラウド／AIパートナー——計測からダッシュボードまで、接地した変革について話したい方を歓迎します。</p>
+        </div>
+        <div class="col-lg-4 text-lg-right" data-aos="fade-left">
+          <a href="https://www.tokyoscale.com/contact/" class="btn btn-light btn-lg">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+            </main>
+
+          <footer class="footer mt-0 ts-footer" role="contentinfo">
+              <div class="container ts-footer-inner">
+                <div class="row justify-content-between">
+                  <div class="col-md-7 col-xl-6 mb-4 mb-md-0">
+                    <a href="https://www.tokyoscale.com/" class="d-inline-flex align-items-center mb-3 ts-footer-logo-link text-black text-decoration-none">
+<svg class="site-logo-mark " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" role="presentation" aria-hidden="true" focusable="false" width="36" height="36">
+  <rect x="6" y="22" width="7" height="10" rx="1.75" fill="#274685"/>
+  <rect x="15.5" y="17" width="7" height="15" rx="1.75" fill="#2c5e97"/>
+  <rect x="25" y="10" width="7" height="22" rx="1.75" fill="#1391a5"/>
+  <path d="M5 34h29v2H5z" fill="#1a3766" opacity=".22"/>
+</svg>
+<span class="ts-footer-brand mb-0 pl-2">TokyoScale</span>
+                    </a>
+                    <p class="small ts-footer-lead mb-2">
+                          水道・ガス・電力の計測から製造現場のIoTまで——クラウドとAIで、現場が使えるダッシュボードを届けます。
+                        </p>
+                    <p class="small ts-footer-address mb-2">
+                      <span class="d-block text-muted mb-1">所在地</span>
+                      〒132-0025 東京都江戸川区松江5-21-2 802
+                    </p>
+                    <p class="small ts-footer-address mb-0">
+                      <span class="d-block text-muted mb-1">電話</span>
+                      <a href="tel:+818013206699" class="ts-footer-phone">080-1320-6699</a>
+                    </p>
+                      </div>
+                  <div class="col-12 col-md-5 mt-2 mt-md-0">
+                    <nav aria-label="フッターナビ">
+                      <h4 class="ts-footer-heading text-black sr-only sr-only-focusable">ナビ</h4>
+                      <ul class="ts-footer-links list-unstyled">
+                          <li><a href="https://www.tokyoscale.com/">ホーム</a></li>
+                          <li><a href="https://www.tokyoscale.com/about-tokyoscale/">私たちについて</a></li>
+                          <li><a href="https://www.tokyoscale.com/utility-monitoring/">ユーティリティ</a></li>
+                          <li><a href="https://www.tokyoscale.com/factories/">製造</a></li>
+                          <li><a href="https://www.tokyoscale.com/contact/">お問い合わせ</a></li>
+                      </ul>
+                    </nav>
+                      </div>
+                </div>
+              </div>
+            </footer>
+        <script src="https://www.tokyoscale.com/vendor/jquery/jquery.min.js"></script>
+        <script src="https://www.tokyoscale.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="https://www.tokyoscale.com/vendor/jquery.easing/jquery.easing.min.js"></script>
+        <script src="https://www.tokyoscale.com/vendor/aos/aos.js"></script>
+        <script src="https://www.tokyoscale.com/vendor/owl.carousel/owl.carousel.min.js"></script>
+        <script src="https://www.tokyoscale.com/vendor/jquery-sticky/jquery.sticky.js"></script>
+
+        <script src="https://www.tokyoscale.com/js/main.js"></script>
+
+          <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    </body>
+</html>
