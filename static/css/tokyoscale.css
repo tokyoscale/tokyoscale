@@ -594,14 +594,16 @@ main.ts-main {
   line-height: 1.5;
 }
 
-.ts-home-prose .ts-vendor-grid {
+.ts-home-prose .ts-vendor-grid,
+.ts-vendor-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.25rem;
   margin: 1.5rem 0 2rem;
 }
 
-.ts-home-prose .ts-vendor-card {
+.ts-home-prose .ts-vendor-card,
+.ts-vendor-card {
   margin: 0;
   background: #fff;
   border: 1px solid #e8eaed;
@@ -610,9 +612,11 @@ main.ts-main {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
-.ts-home-prose .ts-vendor-card img {
+.ts-home-prose .ts-vendor-card img,
+.ts-vendor-card img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   aspect-ratio: 1;
   object-fit: contain;
