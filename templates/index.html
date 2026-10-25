@@ -6,7 +6,7 @@
 {%- endblock title -%}
 
 {%- block meta_description -%}
-{%- if lang == 'ja' -%}水道・ガス・電力メーターと製造現場のIoTを、クラウドとAIでつなぎ、オペレーター向けダッシュボードまで一気通貫で設計・運用するパートナー。{%- else -%}We connect water, gas, and electric meters with shop-floor IoT—cloud platforms, practical AI, and operator dashboards built end to end.{%- endif -%}
+{%- if lang == 'ja' -%}水道・ガス・電力メーターと製造現場のIoTを、クラウドとAIでつなぎ、オペレーター向けダッシュボードまで設計・運用します。東京でのコロケーションと計算基盤も。{%- else -%}We connect water, gas, and electric meters with shop-floor IoT—cloud platforms, practical AI, and operator dashboards. We also design and operate private compute in Tokyo colocation.{%- endif -%}
 {%- endblock meta_description -%}
 
 {% block content %}
@@ -56,27 +56,33 @@
       <div class="row mb-5">
         <div class="col-lg-10 mx-auto text-center">
           <p class="ts-kicker">提供するもの</p>
-          <h2 class="ts-h2">計装ハードウェア · クラウド · AI — 現場が使うダッシュボードまで。</h2>
-          <p class="ts-prose mx-auto mt-3">メーターとバルブの選定、MQTTデバイス台帳、時系列データ、SCADA風の監視画面、定期レポート、異常検知——「画面を増やす」のではなく、運用の一本線をつくります。</p>
+          <h2 class="ts-h2">計装ハードウェア · クラウド · AI · コロケーション — 現場が使うところまで。</h2>
+          <p class="ts-prose mx-auto mt-3">メーターとバルブの選定、MQTTデバイス台帳、時系列データ、SCADA風の監視画面、定期レポート、異常検知。加えて、東京のデータセンターでのラック利用と、開発用計算基盤の調達・構築・運用。「画面を増やす」のではなく、運用の一本線をつくります。</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="col-md-6 mb-4">
           <div class="ts-card" data-aos="fade-up">
             <h3>ユーティリティ &amp; IoT</h3>
             <p>スマート水道メーター、電動バルブ、ガス調整点、揚水ポンプ——NB-IoT・LoRa・MQTTで束ね、7,000台規模の台帳管理から単一拠点のSCADAまで。</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="col-md-6 mb-4">
           <div class="ts-card" data-aos="fade-up" data-aos-delay="80">
             <h3>クラウド基盤</h3>
             <p>デバイス認証、時系列ストア、API、マルチテナントのクライアントダッシュボード。現場と本部で同じ数字が見える設計。</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 mb-4 mb-md-0">
           <div class="ts-card" data-aos="fade-up" data-aos-delay="160">
             <h3>AI &amp; 製造</h3>
             <p>漏洩・異常使用量・設備故障のパターン検知。製造ラインの流量・電力・振動——閾値とエスカレーションを先に決め、信号がある領域にだけMLを載せます。</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>コロケーション &amp; 計算基盤</h3>
+            <p>東京のデータセンターでラック・電源・回線を調整し、GPUワークステーションやCIワーカーを調達・設置。監視、パッチ、復元訓練まで年間で運用します。</p>
           </div>
         </div>
       </div>
@@ -88,9 +94,9 @@
       <div class="row mb-5">
         <div class="col-lg-10">
           <p class="ts-kicker">重点領域</p>
-          <h2 class="ts-h2">ユーティリティ · 製造 · クラウド／AI — 計測から意思決定まで。</h2>
-          <p class="ts-prose mb-2">メーター台帳、揚水ポンプのSCADA、工場の流量・電力——いずれも<strong>ダッシュボードを増やすこと</strong>が目的ではなく、<strong>何を異常とみなし、誰が動くか</strong>を先に決めることが先です。</p>
-          <p class="small mb-0 text-muted">詳細ページ：<a href="{{ get_url(path='@/utility-monitoring.md', lang=lang) }}">ユーティリティ計測</a> · <a href="{{ get_url(path='@/factories.md', lang=lang) }}">製造・工場</a> · <a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}">私たちについて</a></p>
+          <h2 class="ts-h2">ユーティリティ · 製造 · クラウド／AI · コロケーション — 計測から計算基盤まで。</h2>
+          <p class="ts-prose mb-2">メーター台帳、揚水ポンプのSCADA、工場の流量・電力、開発用ラック——いずれも<strong>画面や台数を増やすこと</strong>が目的ではなく、<strong>何を異常とみなし、誰が動くか</strong>を先に決めることが先です。</p>
+          <p class="small mb-0 text-muted">詳細ページ：<a href="{{ get_url(path='@/utility-monitoring.md', lang=lang) }}">ユーティリティ計測</a> · <a href="{{ get_url(path='@/factories.md', lang=lang) }}">製造・工場</a> · <a href="{{ get_url(path='@/cloud-infrastructure.md', lang=lang) }}">クラウド基盤・コロケーション</a> · <a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}">私たちについて</a></p>
         </div>
       </div>
 
@@ -141,7 +147,7 @@
         </div>
       </div>
 
-      <div id="cloud-ai-sector" class="row align-items-start">
+      <div id="cloud-ai-sector" class="row align-items-start mb-5 pb-5 border-bottom">
         <div class="col-lg-7 mb-4 mb-lg-0">
           <p class="ts-kicker mb-1">クラウド &amp; AI</p>
           <h3 class="h4 font-weight-bold mb-3">マルチテナント基盤と、信号があるところだけの実用AI。</h3>
@@ -158,6 +164,27 @@
               <li>計測→可視化→レポートの段階的ロールアウト</li>
             </ul>
             <a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">私たちについて</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="colocation-sector" class="row align-items-start">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <p class="ts-kicker mb-1">コロケーション &amp; 計算基盤</p>
+          <h3 class="h4 font-weight-bold mb-3">東京のデータセンターで、開発用計算基盤の設計・調達・運用まで。</h3>
+          <div class="ts-prose">
+            <p>GPUワークステーション、CIワーカー、エージェント用ホストをラックに載せ、回線と電源は施設事業者と確定します。セキュリティ設計、多要素認証、バックアップと復元訓練、そして24時間監視・週次点検・パッチ管理・月次報告までを、年間の運用として引き受けます。設計と性能検証は、調達の前に切り出します。</p>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 ts-home-sector-mood">
+          <div class="ts-section-mood-accent mb-3">{{ mood::mood_svg(kind="foundation") }}</div>
+          <div class="ts-card">
+            <ul class="list-unstyled ts-value-list mb-4 small">
+              <li>ラック利用（電源・回線）と現地設置・受入試験</li>
+              <li>調達、初期ネットワーク、リモートKVM</li>
+              <li>監視・パッチ・一次切り分け・セキュリティレビュー</li>
+            </ul>
+            <a href="{{ get_url(path='@/cloud-infrastructure.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">基盤について詳しく</a>
           </div>
         </div>
       </div>
@@ -211,8 +238,8 @@
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-lg-8 mb-4 mb-lg-0">
-          <h2>ユーティリティ・製造・クラウド／AIのご相談は、まず対話から。</h2>
-          <p class="mt-3 mb-0">水道・ガス・電力事業者、製造業、計装メーカー、インフラオペレーター、クラウド／AIパートナー——計測からダッシュボードまで、接地した変革について話したい方を歓迎します。</p>
+          <h2>ユーティリティ・製造・クラウド／AI・コロケーションのご相談は、まず対話から。</h2>
+          <p class="mt-3 mb-0">水道・ガス・電力事業者、製造業、計装メーカー、インフラオペレーター、計算基盤をラックで持ちたいチーム——計測からコロケーションまで、接地した話を歓迎します。</p>
         </div>
         <div class="col-lg-4 text-lg-right" data-aos="fade-left">
           <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-light btn-lg">お問い合わせ</a>
@@ -266,27 +293,33 @@
       <div class="row mb-5">
         <div class="col-lg-10 mx-auto text-center">
           <p class="ts-kicker">What we bring</p>
-          <h2 class="ts-h2">Metering hardware · cloud · AI—to dashboards operators use.</h2>
-          <p class="ts-prose mx-auto mt-3">Meter and valve selection, MQTT device registries, time-series data, SCADA-style views, scheduled reports, anomaly detection—we build one operational thread, not another screen farm.</p>
+          <h2 class="ts-h2">Metering hardware · cloud · AI · colocation—through to what operators run.</h2>
+          <p class="ts-prose mx-auto mt-3">Meter and valve selection, MQTT device registries, time-series data, SCADA-style views, scheduled reports, anomaly detection. Also Tokyo rack space, and procurement, build, and operations for private compute. One operational thread, not another screen farm.</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="col-md-6 mb-4">
           <div class="ts-card" data-aos="fade-up">
             <h3>Utilities &amp; IoT</h3>
             <p>Smart water meters, motorized valves, gas regulation points, pump stations—NB-IoT, LoRa, MQTT—from 7,000-device registries to single-site SCADA.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="col-md-6 mb-4">
           <div class="ts-card" data-aos="fade-up" data-aos-delay="80">
             <h3>Cloud platform</h3>
             <p>Device auth, time-series stores, APIs, multi-tenant client dashboards—the same numbers in the field and at HQ.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 mb-4 mb-md-0">
           <div class="ts-card" data-aos="fade-up" data-aos-delay="160">
             <h3>AI &amp; manufacturing</h3>
             <p>Leak and anomaly patterns, abnormal usage, equipment faults—thresholds and escalation first; ML only where labels and signals are honest.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ts-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Colocation &amp; compute</h3>
+            <p>Tokyo data-center racks, power, and connectivity—GPU workstations and CI workers procured, installed, then monitored, patched, and recovery-tested for the year.</p>
           </div>
         </div>
       </div>
@@ -298,11 +331,12 @@
       <div class="row mb-5">
         <div class="col-lg-10">
           <p class="ts-kicker">Focus areas</p>
-          <h2 class="ts-h2">Utilities · manufacturing · cloud &amp; AI—from measurement to decisions.</h2>
-          <p class="ts-prose mb-2">Device registries, pump-station SCADA, factory flow and power—none of these are solved by <strong>more dashboards for their own sake</strong>. Define <strong>what is abnormal</strong> and <strong>who acts</strong> first.</p>
+          <h2 class="ts-h2">Utilities · manufacturing · cloud &amp; AI · colocation—from measurement to private compute.</h2>
+          <p class="ts-prose mb-2">Device registries, pump-station SCADA, factory flow and power, a development rack—none of these are solved by <strong>more screens or more machines for their own sake</strong>. Define <strong>what is abnormal</strong> and <strong>who acts</strong> first.</p>
           <p class="small mb-0 text-muted">Full briefs:
             <a href="{{ get_url(path='@/utility-monitoring.md', lang=lang) }}">Utility metering</a>,
             <a href="{{ get_url(path='@/factories.md', lang=lang) }}">Manufacturing</a>,
+            <a href="{{ get_url(path='@/cloud-infrastructure.md', lang=lang) }}">Cloud infrastructure</a>,
             <a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}">About us</a>.</p>
         </div>
       </div>
@@ -354,7 +388,7 @@
         </div>
       </div>
 
-      <div id="cloud-ai-sector" class="row align-items-start">
+      <div id="cloud-ai-sector" class="row align-items-start mb-5 pb-5 border-bottom">
         <div class="col-lg-7 mb-4 mb-lg-0">
           <p class="ts-kicker mb-1">Cloud &amp; AI</p>
           <h3 class="h4 font-weight-bold mb-3">Multi-tenant platforms and practical AI—only where signals exist.</h3>
@@ -371,6 +405,27 @@
               <li>Phased rollout: measure → visualize → report</li>
             </ul>
             <a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">About us</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="colocation-sector" class="row align-items-start">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <p class="ts-kicker mb-1">Colocation &amp; compute</p>
+          <h3 class="h4 font-weight-bold mb-3">Tokyo data-center racks—design, procurement, and operations for private compute.</h3>
+          <div class="ts-prose">
+            <p>GPU workstations, CI workers, and agent hosts go in a rack whose power and connectivity are agreed with the facility. Security design, multi-factor authentication, backup and a restore drill, then a year of 24-hour monitoring, weekly on-site checks, patching, and a monthly report. Design and performance checks are scoped before anything is purchased.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 ts-home-sector-mood">
+          <div class="ts-section-mood-accent mb-3">{{ mood::mood_svg(kind="foundation") }}</div>
+          <div class="ts-card">
+            <ul class="list-unstyled ts-value-list mb-4 small">
+              <li>Rack, power, and connectivity, plus on-site install and acceptance tests</li>
+              <li>Procurement, initial network, and remote KVM</li>
+              <li>Monitoring, patching, first-line triage, security reviews</li>
+            </ul>
+            <a href="{{ get_url(path='@/cloud-infrastructure.md', lang=lang) }}" class="btn btn-sm btn-outline-secondary">Read the infrastructure brief</a>
           </div>
         </div>
       </div>
@@ -424,8 +479,8 @@
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-lg-8 mb-4 mb-lg-0">
-          <h2>Talk to us about utility metering, manufacturing IoT, cloud platforms, and practical AI.</h2>
-          <p class="mt-3 mb-0">Water and gas utilities, manufacturers, instrumentation vendors, infrastructure operators, and cloud/AI partners—we would like to hear from you.</p>
+          <h2>Talk to us about utility metering, manufacturing IoT, cloud platforms, and Tokyo colocation.</h2>
+          <p class="mt-3 mb-0">Water and gas utilities, manufacturers, instrumentation vendors, and teams that want private compute in a rack—we would like to hear from you.</p>
         </div>
         <div class="col-lg-4 text-lg-right" data-aos="fade-left">
           <a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="btn btn-light btn-lg">Contact TokyoScale</a>

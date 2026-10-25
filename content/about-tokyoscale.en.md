@@ -15,6 +15,8 @@ Telemetry earns trust when operators use it—losses become visible, recovery sp
 
 We are not an AI billboard agency. We deliver **proven metering hardware** (Ningbo Water Meter, Shandong Rongxian Instrument, Ningbo Xingyuan Meter, Yuhuan Sierjia Valve), **cloud infrastructure** (MQTT, time-series stores, multi-tenant UIs), and **practical AI** (leak, abnormal usage, and equipment fault patterns)—always paired with operational discipline.
 
+Separate from metering platforms, we also take on **Tokyo colocation** and the private compute that sits in it: procurement, rack install, and acceptance tests; security (endpoint protection, multi-factor authentication, hardening); backup and restore drills; and year-round operations—24-hour monitoring, weekly on-site checks, patching, and a monthly report. Design and performance validation are scoped as technical consulting before anything is purchased. See [Cloud infrastructure & colocation](/en/cloud-infrastructure/).
+
 ## How we work
 
 Engagements vary, but the backbone is consistent: listen before tooling, sequence before big-bang rollouts, steward after launch.
@@ -48,6 +50,13 @@ Vendors ship updates, regulations change, teams turn over. Stewardship—not han
 **Respect operator know-how** — seasoned plant and field staff carry scarce insight.
 
 **Explainable AI** — ML only where signals and labels are honest; human handoff wired into the UI.
+
+## Company outline
+
+- **Legal name** — TOKYOSCALE Inc. (株式会社TOKYOSCALE)
+- **Address** — 802, 5-21-2 Matsue, Edogawa-ku, Tokyo 132-0025, Japan
+- **Phone** — [080-1320-6699](tel:+818013206699)
+- **Bank** — Mizuho Bank (みずほ銀行)
 
 ### Next step
 

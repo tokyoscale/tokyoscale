@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="{%- block meta_description %}東京スケイル — ユーティリティ・IoT・製造向けの計測、クラウド、AI、クライアントダッシュボード{% endblock meta_description -%}">
+        <meta name="description" content="{%- block meta_description %}東京スケイル — ユーティリティ・IoT・製造向けの計測、クラウド、AI、コロケーションと計算基盤{% endblock meta_description -%}">
         <title>{%- block title -%}{% endblock title -%}</title>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap">
@@ -68,6 +68,7 @@
                     <li><a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}" class="nav-link">{% if lang == 'ja' %}私たちについて{% else %}About{% endif %}</a></li>
                     <li><a href="{{ get_url(path='@/utility-monitoring.md', lang=lang) }}" class="nav-link text-nowrap">{% if lang == 'ja' %}ユーティリティ{% else %}Utilities{% endif %}</a></li>
                     <li><a href="{{ get_url(path='@/factories.md', lang=lang) }}" class="nav-link text-nowrap">{% if lang == 'ja' %}製造{% else %}Manufacturing{% endif %}</a></li>
+                    <li><a href="{{ get_url(path='@/cloud-infrastructure.md', lang=lang) }}" class="nav-link text-nowrap">{% if lang == 'ja' %}基盤{% else %}Infrastructure{% endif %}</a></li>
                     <li><a href="{{ get_url(path='@/contact.md', lang=lang) }}" class="nav-link">{% if lang == 'ja' %}お問い合わせ{% else %}Contact{% endif %}</a></li>
                     </ul>
                 </nav>
@@ -91,9 +92,9 @@
                       <span class="ts-footer-brand mb-0 pl-2">TokyoScale</span>
                     </a>
                     <p class="small ts-footer-lead mb-2">{% if lang == 'ja' %}
-                          水道・ガス・電力の計測から製造現場のIoTまで——クラウドとAIで、現場が使えるダッシュボードを届けます。
+                          水道・ガス・電力の計測から製造現場のIoTまで——クラウドとAIで、現場が使えるダッシュボードを届けます。東京でのコロケーションと計算基盤の設計・運用も行います。
                         {% else %}
-                          From water, gas, and electric metering to shop-floor IoT—cloud platforms and practical AI that operators actually use.
+                          From water, gas, and electric metering to shop-floor IoT—cloud platforms and practical AI that operators actually use. We also design and operate private compute in Tokyo colocation.
                         {% endif %}</p>
                     <p class="small ts-footer-address mb-2">
                       <span class="d-block text-muted mb-1">{% if lang == 'ja' %}所在地{% else %}Address{% endif %}</span>
@@ -112,6 +113,7 @@
                           <li><a href="{{ get_url(path='@/about-tokyoscale.md', lang=lang) }}">{% if lang == 'ja' %}私たちについて{% else %}About{% endif %}</a></li>
                           <li><a href="{{ get_url(path='@/utility-monitoring.md', lang=lang) }}">{% if lang == 'ja' %}ユーティリティ{% else %}Utilities{% endif %}</a></li>
                           <li><a href="{{ get_url(path='@/factories.md', lang=lang) }}">{% if lang == 'ja' %}製造{% else %}Manufacturing{% endif %}</a></li>
+                          <li><a href="{{ get_url(path='@/cloud-infrastructure.md', lang=lang) }}">{% if lang == 'ja' %}クラウド基盤・コロケーション{% else %}Cloud infrastructure{% endif %}</a></li>
                           <li><a href="{{ get_url(path='@/contact.md', lang=lang) }}">{% if lang == 'ja' %}お問い合わせ{% else %}Contact{% endif %}</a></li>
                       </ul>
                     </nav>

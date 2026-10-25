@@ -1,6 +1,6 @@
 +++
 title = "Contact"
-description = "Utility metering, IoT, manufacturing, cloud platforms, and dashboards—whether you are moving soon or exploring options."
+description = "Utility metering, manufacturing IoT, and Tokyo colocation with private-compute design and operations—whether you are moving soon or still exploring."
 template = "contact.html"
 
 [extra]
