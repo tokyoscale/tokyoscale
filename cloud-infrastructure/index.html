@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="東京のデータセンターでのラック利用、開発用計算基盤の調達・構築、セキュリティと運用保守。設計と技術コンサルティングをセットで。">
+        <title>クラウド基盤とコロケーション | TokyoScale</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap">
+        <link href="https://www.tokyoscale.com/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://www.tokyoscale.com/vendor/icofont/icofont.min.css" rel="stylesheet">
+        <link href="https://www.tokyoscale.com/vendor/aos/aos.css" rel="stylesheet">
+        <link href="https://www.tokyoscale.com/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+        <link href="https://www.tokyoscale.com/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="https://www.tokyoscale.com/css/style.css?v=20260630" rel="stylesheet" type="text/css">
+        <link href="https://www.tokyoscale.com/css/tokyoscale.css?v=20260630" rel="stylesheet" type="text/css">
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ0LMRWEF6"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-WJ0LMRWEF6');
+        </script>
+        <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    </head>
+    <body>
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icofont-close js-menu-toggle"></span>
+            </div>
+            </div>
+            <div class="site-mobile-menu-body">
+            <div class="ts-mobile-lang px-4 pt-3 pb-4 border-bottom d-lg-none">
+              
+
+
+
+  
+    
+    
+      
+    
+      
+    
+  
+
+<div class="ts-lang-switch-icons" aria-label="言語選択">
+  <a href="https://www.tokyoscale.com/cloud-infrastructure/"
+     lang="ja" hreflang="ja"
+     class="ts-lang-btn is-active"
+     aria-current="true"
+     aria-label="日本語（現在）"
+     title="日本語"><span class="ts-flag-emoji" role="presentation">🇯🇵</span></a>
+  <a href="https://www.tokyoscale.com/en/cloud-infrastructure/"
+     lang="en-US" hreflang="en"
+     class="ts-lang-btn "
+     
+     aria-label="English"
+     title="English"><span class="ts-flag-emoji" role="presentation">🇬🇧</span></a>
+</div>
+
+            </div>
+            </div>
+        </div>
+
+        <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+            <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-6 col-lg-4">
+                <div class="mb-0 site-logo">
+                  <a href="https://www.tokyoscale.com/" class="site-logo-brand d-inline-flex align-items-center text-body">
+<svg class="site-logo-mark " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" role="presentation" aria-hidden="true" focusable="false" width="36" height="36">
+  <rect x="6" y="22" width="7" height="10" rx="1.75" fill="#274685"/>
+  <rect x="15.5" y="17" width="7" height="15" rx="1.75" fill="#2c5e97"/>
+  <rect x="25" y="10" width="7" height="22" rx="1.75" fill="#1391a5"/>
+  <path d="M5 34h29v2H5z" fill="#1a3766" opacity=".22"/>
+</svg>
+<span class="h4 mb-0 pl-2 site-logo-text font-weight-bold">TokyoScale</span>
+                  </a>
+                </div>
+                </div>
+
+                <div class="col-6 d-flex d-lg-none justify-content-end align-items-center py-3">
+                <div class="mr-2">
+
+
+
+  
+    
+    
+      
+    
+      
+    
+  
+
+<div class="ts-lang-switch-icons" aria-label="言語選択">
+  <a href="https://www.tokyoscale.com/cloud-infrastructure/"
+     lang="ja" hreflang="ja"
+     class="ts-lang-btn is-active"
+     aria-current="true"
+     aria-label="日本語（現在）"
+     title="日本語"><span class="ts-flag-emoji" role="presentation">🇯🇵</span></a>
+  <a href="https://www.tokyoscale.com/en/cloud-infrastructure/"
+     lang="en-US" hreflang="en"
+     class="ts-lang-btn "
+     
+     aria-label="English"
+     title="English"><span class="ts-flag-emoji" role="presentation">🇬🇧</span></a>
+</div>
+</div>
+                <a href="#" class="burger site-menu-toggle js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+                    <span></span>
+                </a>
+                </div>
+
+                <div class="col-lg-8 d-none d-lg-flex align-items-center justify-content-end flex-wrap ts-header-end">
+                <nav class="site-navigation" role="navigation" aria-label="主要">
+                    <ul class="site-menu main-menu js-clone-nav mb-0 d-flex flex-wrap align-items-center justify-content-end">
+                    <li><a href="https://www.tokyoscale.com/" class="nav-link">ホーム</a></li>
+                    <li><a href="https://www.tokyoscale.com/about-tokyoscale/" class="nav-link">私たちについて</a></li>
+                    <li><a href="https://www.tokyoscale.com/utility-monitoring/" class="nav-link text-nowrap">ユーティリティ</a></li>
+                    <li><a href="https://www.tokyoscale.com/factories/" class="nav-link text-nowrap">製造</a></li>
+                    <li><a href="https://www.tokyoscale.com/cloud-infrastructure/" class="nav-link text-nowrap">基盤</a></li>
+                    <li><a href="https://www.tokyoscale.com/contact/" class="nav-link">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <div class="ts-lang-wrap ml-3 pl-3">
+
+
+
+  
+    
+    
+      
+    
+      
+    
+  
+
+<div class="ts-lang-switch-icons" aria-label="言語選択">
+  <a href="https://www.tokyoscale.com/cloud-infrastructure/"
+     lang="ja" hreflang="ja"
+     class="ts-lang-btn is-active"
+     aria-current="true"
+     aria-label="日本語（現在）"
+     title="日本語"><span class="ts-flag-emoji" role="presentation">🇯🇵</span></a>
+  <a href="https://www.tokyoscale.com/en/cloud-infrastructure/"
+     lang="en-US" hreflang="en"
+     class="ts-lang-btn "
+     
+     aria-label="English"
+     title="English"><span class="ts-flag-emoji" role="presentation">🇬🇧</span></a>
+</div>
+</div>
+                </div>
+
+            </div>
+            </div>
+        </header>
+
+            <main class="ts-main">
+                    
+<section class="hero-section inner-page hero-with-mood">
+    <div class="wave">
+
+      <svg width="1920px" height="265px" viewBox="0 0 1920 265" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Apple-TV" transform="translate(0.000000, -402.000000)" fill="#FFFFFF">
+            <path d="M0,439.134243 C175.04074,464.89273 327.944386,477.771974 458.710937,477.771974 C654.860765,477.771974 870.645295,442.632362 1205.9828,410.192501 C1429.54114,388.565926 1667.54687,411.092417 1920,477.771974 L1920,667 L1017.15166,667 L0,667 L0,439.134243 Z" id="Path"></path>
+          </g>
+        </g>
+      </svg>
+
+    </div>
+
+    <div class="container py-lg-4">
+      <div class="row align-items-lg-start justify-content-lg-between gx-lg-5">
+        <div class="col-lg-7 text-center text-lg-start hero-text mb-4 mb-lg-0 pb-2 pb-lg-0 px-3 px-lg-0">
+          <h1 data-aos="fade-up" data-aos-delay="">クラウド基盤とコロケーション</h1>
+          <p class="mb-lg-0 mb-0 pb-5 pb-lg-0" data-aos="fade-up" data-aos-delay="100">東京のデータセンターでのラック利用、開発用計算基盤の調達・構築、セキュリティと運用保守。設計と技術コンサルティングをセットで。</p>
+        </div>
+        <div class="col-lg-4 mb-2 mb-lg-0 px-4 px-lg-2" data-aos="fade-up" data-aos-delay="80">
+          
+<figure class="ts-mood-panel ts-mood-panel--foundation" aria-hidden="true">
+
+  <svg viewBox="0 0 280 220" overflow="visible" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
+    <rect width="280" height="220" fill="#0f1419"/>
+    <g fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.5)" stroke-width="1">
+      <rect x="36" y="148" width="34" height="52" rx="3"/>
+      <rect x="86" y="122" width="34" height="78" rx="3"/>
+      <rect x="136" y="104" width="34" height="96" rx="3"/>
+      <rect x="186" y="88" width="34" height="112" rx="3"/>
+      <rect x="236" y="72" width="34" height="128" rx="3"/>
+    </g>
+    <path d="M20 208h240" stroke="rgba(255,255,255,.22)" stroke-width="1"/>
+  </svg>
+
+</figure>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+    <section class="site-section ts-section-muted">
+        <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 ts-home-prose px-3 px-lg-4">
+              <p>開発用の計算基盤は、パブリッククラウドの従量課金だけでは足りないことがあります。GPUワークステーション、CIワーカー、エージェント用ホストを、電源と回線の条件が読めるラックに置き、監視・パッチ・復旧手順まで自分たちで持ちたい——その設計から運用までを、東京スケイルが引き受けます。</p>
+<h2 id="korokesiyon">コロケーション</h2>
+<p>東京のデータセンターで、ラック単位の設置場所・電源・回線を施設事業者と調整します。回線速度、使用電力、配電、現地作業、契約条件は、正式発注の前に施設側と確定します。初期の回線・電源の導入も、機器の設置と合わせて進めます。</p>
+<h2 id="diao-da-togou-zhu">調達と構築</h2>
+<p>用途に合わせて機器を選定・調達し、組立、輸送、ラック設置、バーンイン、受入試験までを一式で行います。</p>
+<ul>
+<li><strong>GPU開発用ワークステーション</strong> — 学習・推論の試作、ローカルでのモデル検証</li>
+<li><strong>CI・テスト用ワーカー</strong> — ビルドと試験をラック内で回す</li>
+<li><strong>AIエージェント用ホスト</strong> — 常時稼働の小さな実行環境</li>
+<li><strong>ネットワーク</strong> — ルーター／VPN、スイッチ、リモートKVM、ラック内配線の初期構築</li>
+</ul>
+<p>型番、電源容量、筐体とラックの物理適合は発注前に検証します。合わない場合は協議のうえ仕様を変えます。</p>
+<h2 id="sekiyuriteitofu-jiu">セキュリティと復旧</h2>
+<p>初期構築に、セキュリティ設計、端末保護、多要素認証、アクセス権、ハードニングを含めます。バックアップと障害復旧の基盤を作り、復元訓練まで実施します。設計書と運用手順書を残し、担当が代わっても同じ手順で動けます。</p>
+<h2 id="yun-yong-bao-shou">運用保守</h2>
+<p>監視して終わりにしません。年間の運用には、次を含めます。</p>
+<ul>
+<li>24時間の自動監視</li>
+<li>週次点検（現地の目視を含む）</li>
+<li>脆弱性とパッチの管理</li>
+<li>一次切り分け</li>
+<li>月次報告</li>
+<li>定期的なセキュリティレビュー</li>
+</ul>
+<p>データセンター利用料、機器、運用保守は範囲が違うため、見積は分けて出します。AIの利用料、エンドポイント保護のライセンス、バックアップ保管料、専用線、部品代など、範囲外のものは見積に明記します。</p>
+<h2 id="ji-shu-konsaruteingu">技術コンサルティング</h2>
+<p>基盤設計、性能検証、受入条件の定義を、調達の前に行います。台数を増やす前に、何をこのラックで回すか、障害時に誰が何をするかを決めます。</p>
+<h3 id="ci-noyi-bu">次の一歩</h3>
+<p><a href="/contact/">お問い合わせ</a> から、ラック条件や想定ワークロードをご連絡ください。仕様が固まる前の相談でも構いません。</p>
+
+              
+              <p class="small text-muted border-top pt-3 mt-4 mb-0">
+                別言語:
+                
+                <a href="https://www.tokyoscale.com/en/cloud-infrastructure/" hreflang="en">English</a> · 
+                
+                <a href="https://www.tokyoscale.com/cloud-infrastructure/" hreflang="ja">日本語</a>
+                
+              </p>
+              
+            </div>
+        </div>
+        </div>
+    </section>
+
+            </main>
+
+          <footer class="footer mt-0 ts-footer" role="contentinfo">
+              <div class="container ts-footer-inner">
+                <div class="row justify-content-between">
+                  <div class="col-md-7 col-xl-6 mb-4 mb-md-0">
+                    <a href="https://www.tokyoscale.com/" class="d-inline-flex align-items-center mb-3 ts-footer-logo-link text-black text-decoration-none">
+<svg class="site-logo-mark " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" role="presentation" aria-hidden="true" focusable="false" width="36" height="36">
+  <rect x="6" y="22" width="7" height="10" rx="1.75" fill="#274685"/>
+  <rect x="15.5" y="17" width="7" height="15" rx="1.75" fill="#2c5e97"/>
+  <rect x="25" y="10" width="7" height="22" rx="1.75" fill="#1391a5"/>
+  <path d="M5 34h29v2H5z" fill="#1a3766" opacity=".22"/>
+</svg>
+<span class="ts-footer-brand mb-0 pl-2">TokyoScale</span>
+                    </a>
+                    <p class="small ts-footer-lead mb-2">
+                          水道・ガス・電力の計測から製造現場のIoTまで——クラウドとAIで、現場が使えるダッシュボードを届けます。東京でのコロケーションと計算基盤の設計・運用も行います。
+                        </p>
+                    <p class="small ts-footer-address mb-2">
+                      <span class="d-block text-muted mb-1">所在地</span>
+                      〒132-0025 東京都江戸川区松江5-21-2 802
+                    </p>
+                    <p class="small ts-footer-address mb-0">
+                      <span class="d-block text-muted mb-1">電話</span>
+                      <a href="tel:+818013206699" class="ts-footer-phone">080-1320-6699</a>
+                    </p>
+                      </div>
+                  <div class="col-12 col-md-5 mt-2 mt-md-0">
+                    <nav aria-label="フッターナビ">
+                      <h4 class="ts-footer-heading text-black sr-only sr-only-focusable">ナビ</h4>
+                      <ul class="ts-footer-links list-unstyled">
+                          <li><a href="https://www.tokyoscale.com/">ホーム</a></li>
+                          <li><a href="https://www.tokyoscale.com/about-tokyoscale/">私たちについて</a></li>
+                          <li><a href="https://www.tokyoscale.com/utility-monitoring/">ユーティリティ</a></li>
+                          <li><a href="https://www.tokyoscale.com/factories/">製造</a></li>
+                          <li><a href="https://www.tokyoscale.com/cloud-infrastructure/">クラウド基盤・コロケーション</a></li>
+                          <li><a href="https://www.tokyoscale.com/contact/">お問い合わせ</a></li>
+                      </ul>
+                    </nav>
+                      </div>
+                </div>
+              </div>
+            </footer>
+        <script src="https://www.tokyoscale.com/vendor/jquery/jquery.min.js"></script>
+        <script src="https://www.tokyoscale.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="https://www.tokyoscale.com/vendor/jquery.easing/jquery.easing.min.js"></script>
+        <script src="https://www.tokyoscale.com/vendor/aos/aos.js"></script>
+        <script src="https://www.tokyoscale.com/vendor/owl.carousel/owl.carousel.min.js"></script>
+        <script src="https://www.tokyoscale.com/vendor/jquery-sticky/jquery.sticky.js"></script>
+
+        <script src="https://www.tokyoscale.com/js/main.js"></script>
+
+          <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    </body>
+</html>
